@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorAppMain"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <Button
+            android:id="@+id/button_word"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_corner"
+            android:fontFamily="sans-serif-light"
+            android:onClick="buttonOnWordClick"
+            android:padding="10dp"
+            android:text="@string/button_reveal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_timer" />
+
+        <Button
+            android:id="@+id/button_timer"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/round_corner_timer"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="buttonOnTimerClick"
+            android:text="@string/timer_start"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/image_button_wrong"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginEnd="300dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_corner_left"
+            android:cropToPadding="true"
+            android:onClick="buttonOnWrongClick"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_circle_wrong" />
+
+        <ImageButton
+            android:id="@+id/image_button_correct"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="40dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_corner_right"
+            android:cropToPadding="true"
+            android:onClick="buttonOnCorrectClick"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/image_button_wrong"
+            app:srcCompat="@drawable/ic_circle_correct" />
+
+        <ImageButton
+            android:id="@+id/image_button_wiki"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_corner"
+            android:cropToPadding="true"
+            android:onClick="buttonOnWikiClick"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/image_button_correct"
+            app:layout_constraintEnd_toStartOf="@+id/image_button_img"
+            app:layout_constraintStart_toEndOf="@+id/image_button_dict"
+            app:layout_constraintTop_toBottomOf="@+id/button_word"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/wiki" />
+
+        <ImageButton
+            android:id="@+id/image_button_dict"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_corner"
+            android:cropToPadding="true"
+            android:onClick="buttonOnDictClick"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/image_button_wrong"
+            app:layout_constraintEnd_toStartOf="@+id/image_button_wiki"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_word"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_dict" />
+
+        <ImageButton
+            android:id="@+id/image_button_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_corner"
+            android:cropToPadding="true"
+            android:onClick="buttonOnGoogleClick"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/image_button_correct"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/image_button_wiki"
+            app:layout_constraintTop_toBottomOf="@+id/button_word"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_img_search" />
+
+        <TextView
+            android:id="@+id/text_score"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/round_corner_timer"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/text_score"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_button_correct"
+            app:layout_constraintStart_toEndOf="@+id/image_button_wrong"
+            app:layout_constraintTop_toTopOf="@+id/image_button_correct" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

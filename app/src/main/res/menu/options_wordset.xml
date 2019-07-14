@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".WordSetActivity">
+
+    <item android:id="@+id/opt_wordset_new_list"
+        android:icon="@drawable/ic_list_add"
+        android:title="@string/options_wordset_new_list" />
+
+    <item android:id="@+id/opt_wordset_delete_list"
+        android:icon="@drawable/ic_list_remove"
+        android:title="@string/options_wordset_delete_list" />
+
+    <item android:id="@+id/opt_wordset_copy"
+        android:icon="@drawable/ic_copy"
+        android:title="@string/options_wordset_copy" />
+
+    <item android:id="@+id/opt_wordset_paste"
+        android:icon="@drawable/ic_paste"
+        android:title="@string/options_wordset_paste" />
+
+</menu>

@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:weightSum="1"
+    android:background="@color/colorAppMain">
+
+    <!-- HARDCODED VALUES 60dp -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/title_activity_manual"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+</LinearLayout>

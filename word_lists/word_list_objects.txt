@@ -1,0 +1,395 @@
+Golf club # en # 1
+Golfschläger # de # 1
+Golfclub # nl # 1
+
+Lamppost # en # 1
+Laternenpfahl # de # 1
+Lantaarnpaal # nl # 1
+
+Basketball # en # 2
+Basketball # de # 2
+Basketbal # nl # 2
+
+Bucket # en # 2
+Eimer # de # 2
+Emmer # nl # 2
+
+Aquarium # en # 2
+Aquarium # de # 2
+Aquarium # nl # 2
+
+Knife # en # 1
+Messer # de # 1
+Mes # nl # 1
+
+Hammer # en # 1
+Hammer # de # 1
+Hamer # nl # 1
+
+Guitar # en # 1
+Gitarre # de # 1
+Gitaar # nl # 1
+
+Sword # en # 1
+Schwert # de # 1
+Zwaard # nl # 1
+
+Table # en # 1
+Tisch # de # 1
+Tafel # nl # 1
+
+Ventilator # en # 1
+Ventilator # de # 1
+Ventilator # nl # 1
+
+Alarm clock # en # 1
+Wecker # de # 1
+Wekker # nl # 1
+
+Ski # en # 1
+Ski # de # 1
+Ski # nl # 1
+
+Robot # en # 1
+Robotter # de # 1
+Robot # nl # 1
+
+Glasses # en # 1
+Brille # de # 1
+Bril # nl # 1
+
+TV # en # 1
+Fernseher # de # 1
+Televisie # nl # 1
+
+Cannon # en # 1
+Kanone # de # 1
+Kanon # nl # 1
+
+Fork # en # 1
+Gabel # de # 1
+Vork # nl # 1
+
+Sofa # en # 1
+Sofa # de # 1
+Bank # nl # 1
+
+Fireplace # en # 1
+Kamin # de # 1
+Openhaard # nl # 1
+
+Tent # en # 1
+Zelt # de # 1
+Tent # nl # 1
+
+Shoe # en # 1
+Schuh # de # 1
+Schoen # nl # 1
+
+Photo camera # en # 1
+Fotoapparat # de # 1
+Foto-apparaat # nl # 1
+
+Bed # en # 1
+Bett # de # 1
+Bed # nl # 1
+
+Basket # en # 1
+Korb # de # 1
+Mand # nl # 1
+
+Game console # en # 1
+Spielekonsole # de # 1
+Spelcomputer # nl # 1
+
+Catapult # en # 1
+Katapult # de # 1
+Catapult # nl # 1
+
+Coffee maker # en # 1
+Kaffeemaschine # de # 1
+Koffiezetapparaat # nl # 1
+
+Computer # en # 1
+Rechner # de # 1
+Computer # nl # 1
+
+Radio # en # 1
+Radio # de # 1
+Radio # nl # 1
+
+Propellor # en # 1
+Propeller # de # 1
+Propeller # nl # 1
+
+Pencil # en # 1
+Bleistift # de # 1
+Potlood # nl # 1
+
+Mailbox # en # 1
+Briefkasten # de # 1
+Brievenbus # nl # 1
+
+Fishing rod # en # 1
+Angel # de # 1
+Vishengel # nl # 1
+
+Canopy bed # en # 1
+Himmelbett # de # 1
+Hemelbed # nl # 1
+
+Piano # en # 1
+Klavier # de # 1
+Piano # nl # 1
+
+Lamp # en # 1
+Lampe # de # 1
+Lamp # nl # 1
+
+Rolling pin # en # 1
+Nudelholz # de # 1
+Deegroller # nl # 1
+
+Bench # en # 1
+Bank # de # 1
+Bank # nl # 1
+
+Christmas tree # en # 1
+Weihnachtsbaum # de # 1
+Kerstboom # nl # 1
+
+Surf board # en # 1
+Surfboard # de # 1
+Surfplank # nl # 1
+
+Traffic light # en # 1
+Ampel # de # 1
+Verkeerslicht # nl # 1
+
+Birdhouse # en # 1
+Vogelhaus # de # 1
+Vogelhuisje # nl # 1
+
+Armchair # en # 1
+Sessel # de # 1
+Stoel # nl # 1
+
+Barbeque # en # 1
+Grill # de # 1
+Barbeque # nl # 1
+
+Hat # en # 1
+Hut # de # 1
+Hoed # nl # 1
+
+Wardrope # en # 2
+Kleiderscharnk # de # 2
+Kledingkast # nl # 2
+
+Vacuum cleaner # en # 2
+Staubsauger # de # 2
+Stofzuiger # nl # 2
+
+Carpet # en # 2
+Teppich # de # 2
+Tapijt # nl # 2
+
+Hairdryer # en # 2
+Föhn # de # 2
+Föhn # nl # 2
+
+Snowwoman # en # 2
+Schneefrau # de # 2
+Sneeuwvrouw # nl # 2
+
+Arrow # en # 2
+Pfeil # de # 2
+Pijl # nl # 2
+
+Laptop # en # 2
+Laptop # de # 2
+Laptop # nl # 2
+
+Sewing machine # en # 2
+Nähmaschine # de # 2
+Naaimachine # nl # 2
+
+Faucet # en # 2
+Wasserhahn # de # 2
+Waterkraan # nl # 2
+
+Kitchen stove # en # 2
+Kochherd # de # 2
+Kooktoestel # nl # 2
+
+Flat iron # en # 2
+Bügeleisen # de # 2
+Strijkijzer # nl # 2
+
+Parachute # en # 2
+Fallschirm # de # 2
+Parachute # nl # 2
+
+Telephone # en # 2
+Telefon # de # 2
+Telefoon # nl # 2
+
+Key # en # 2
+Schlüssel # de # 2
+Sleutel # nl # 2
+
+Toilet # en # 2
+Toilette # de # 2
+Toilet # nl # 2
+
+Washing machine # en # 2
+Waschmaschine # de # 2
+Wasmachine # nl # 2
+
+Vase # en # 2
+Vase # de # 2
+Vaas # nl # 2
+
+Turd # en # 2
+Scheißhaufen # de # 2
+Drol # nl # 2
+
+Toaster # en # 2
+Toaster # de # 2
+Broodrooster # nl # 2
+
+Cage # en # 2
+Käfig # de # 2
+Kooi # nl # 2
+
+Suitcase # en # 2
+Koffer # de # 2
+Koffer # nl # 2
+
+Lawnmower # en # 2
+Rasenmäher # de # 2
+Grasmaaier # nl # 2
+
+Saw # en # 2
+Säge # de # 2
+Zaag # nl # 2
+
+Roller skates # en # 2
+Rollschuhe # de # 2
+Rolschoenen # nl # 2
+
+Measuring stick # en # 2
+Messstab # de # 2
+Meetlat # nl # 2
+
+Plate # en # 2
+Teller # de # 2
+Bord # nl # 2
+
+Shower # en # 2
+Dusche # de # 2
+Douche # nl # 2
+
+Wrench # en # 2
+Schraubenschlüssel # de # 2
+Moersleutel # nl # 2
+
+Wheelbarrow # en # 2
+Schubkarre # de # 2
+Kruiwagen # nl # 2
+
+Book # en # 2
+Buch # de # 2
+Boek # nl # 2
+
+Washing basin # en # 2
+Waschbecken # de # 2
+Wasbak # nl # 2
+
+Drill # en # 2
+Bohrmaschine # de # 2
+Boormachine # nl # 2
+
+Pan # en # 2
+Pfanne # de # 2
+Pan # nl # 2
+
+Microwave # en # 2
+Mikrowelle # de # 2
+Magnetron # nl # 2
+
+Microscope # en # 2
+Mikroskop # de # 2
+Microscoop # nl # 2
+
+Treasure chest # en # 2
+Schatztruhe # de # 2
+Schatkist # nl # 2
+
+Toothbrush # en # 2
+Zahnbürste # de # 2
+Tandenborstel # nl # 2
+
+Chainsaw # en # 2
+Kettensäge # de # 2
+Kettingzaag # nl # 2
+
+Blender # en # 3
+Mixgerät # de # 3
+BLender # nl # 3
+
+Fire extinguisher # en # 3
+Feuerlöschgerät # de # 3
+Brandblusser # nl # 3
+
+Head phones # en # 3
+Kopfhörer # de # 3
+Koptelefoon # nl # 3
+
+Drums # en # 3
+Schlagzeug # de # 3
+Drumstel # nl # 3
+
+Watch # en # 3
+Uhr # de # 3
+Horloge # nl # 3
+
+Screwdriver # en # 3
+Schraubendreher # de # 3
+Schroevendraaier # nl # 3
+
+Laser gun # en # 3
+Laserkanone # de # 3
+Laserkanon # nl # 3
+
+light bulb # en # 3
+Glühbirne # de # 3
+Gloeilamp # nl # 3
+
+Blackboard # en # 3
+Tafel # de # 3
+Schoolbord # nl # 3
+
+Stethoscope # en # 3
+Stethoskop # de # 3
+Stethoscoop # nl # 3
+
+Thermos flask # en # 3
+Thermoskanne # de # 3
+Thermoskan # nl # 3
+
+Monocle # en # 3
+Monokel # de # 3
+Monocle # nl # 3
+
+Syringe # en # 3
+Spritze # de # 3
+Spuit # nl # 3
+
+Binoculars # en # 3
+Fernglas # de # 3
+Verrekijker # nl # 3
+
+Buoy # en # 3
+Boje # de # 3
+Boei # nl # 3

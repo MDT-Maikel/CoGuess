@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="2dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/score_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:background="@drawable/round_corner" />
+
+        <TextView
+            android:id="@+id/score_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.275"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_vertical"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingLeft="8dp" />
+
+        <TextView
+            android:id="@+id/score_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.275"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="2dp" />
+    </LinearLayout>
+
+</RelativeLayout>

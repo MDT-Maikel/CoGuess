@@ -1,0 +1,29 @@
+All word lists are separated by category, these are:
+
+* Nature	- Animals, Plants, Fruit, Natural objects.
+* Objects	- Tools, Utensils, Clothing, Furnutire.
+* Vehicles	- .
+* Structures    - .
+
+
+The words in these lists are formatted like this:
+[WORD] # [LANGUAGE CODE] # [DIFFICULTY]
+
+
+The same words are grouped for each language, example:
+Island # en # 1
+Insel # de # 1
+Eiland # nl # 1
+
+
+The Language codes are:
+en, de, nl
+
+
+The difficulties are:
+* 1 - Basic
+* 2 - Intermediate
+* 4 - Advanced 
+
+
+The word lists are merged into a database for the application using the Python script.

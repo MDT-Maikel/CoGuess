@@ -1,0 +1,108 @@
+<resources>
+    <!-- Main -->
+    <string name="app_name">CoGuess</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_manual">Game Manual</string>
+    <string name="title_activity_scores">Scores</string>
+    <string name="title_activity_wordset">Custom Words</string>
+    <string name="no_word_set_selected">Select a word set before starting the game!</string>
+    <string name="display_word_set_size">Starting the game with %d words.</string>
+    <string name="display_achieved_score">Your team scored %d points! Check the scores tab to see how you performed.</string>
+
+
+    <!-- Buttons & Texts -->
+    <string name="button_reveal">Reveal!</string>
+    <string name="button_show">Show!</string>
+    <string name="text_score">0</string>
+    <string name="timer_start">Start!</string>
+
+
+    <!-- Dialogs -->
+    <string name="delete_confirm">Confirm</string>
+    <string name="delete_cancel">Cancel</string>
+
+
+    <!-- Options Menu -->
+    <string name="options_settings">Settings</string>
+    <string name="options_high_scores">Scores</string>
+    <string name="options_about">About</string>
+    <string name="options_manual">Game Manual</string>
+    <string name="options_wordset">Custom Words</string>
+
+
+    <!-- Preference Page -->
+    <string name="pref_language">Language</string>
+    <string name="pref_language_dialog">Select language:</string>
+    <string name="pref_language_description">Choose language for words</string>
+
+    <string name="pref_word_difficulties">Word Difficulties</string>
+    <string name="pref_word_difficulties_dialog">Select word difficulty sets:</string>
+    <string name="pref_word_difficulties_description">Choose a combination of word difficulty sets</string>
+
+    <string name="pref_word_categories">Word Categories</string>
+    <string name="pref_word_categories_dialog">Select word categories:</string>
+    <string name="pref_word_categories_description">Choose a combination of word categories</string>
+
+    <string name="pref_duration">Game Duration</string>
+    <string name="pref_duration_dialog">Select game duration:</string>
+    <string name="pref_duration_description">Choose duration for a single round</string>
+
+    <string name="pref_penalty">Time Penalty</string>
+    <string name="pref_penalty_dialog">Select time penalty:</string>
+    <string name="pref_penalty_description">Choose a time penalty for each non-guessed word</string>
+
+    <string name="string_pref_team_name">Team Name</string>
+    <string name="string_pref_team_name_description">Enter a team name (for scores)</string>
+    <string name="string_pref_team_name_default">CoGuess</string>
+
+
+    <!-- Score Page -->
+    <string name="score_header_name">Team Name</string>
+    <string name="score_header_points">Points</string>
+    <string name="score_delete_confirmation">Delete all scores?</string>
+
+
+    <!-- About Page -->
+    <string name="about_description">CoGuess is a cooperative guessing game. This application provides the words that need to be guessed by the players. Currently the word database contains: \n%s</string>
+    <string name="about_license_title">License &amp; Source</string>
+    <string name="about_license">This application is free as well as open source and available on <a href="https://github.com/MDT-Maikel/CoGuess">GitHub</a>. It is licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a> for code and <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a> for all other content. See the source code on GitHub for more details.</string>
+    <string name="about_feedback_title">Bugs &amp; Issues</string>
+    <string name="about_feedback">Please go to <a href="https://github.com/MDT-Maikel/CoGuess/issues">GitHub</a> for bug reports, pull requests, typographical errors, problems with the word lists, and issues with the application on different Android versions or devices.</string>
+    <string name="about_donation_title">Support</string>
+    <string name="about_donation">This application will remain free, open source and free of advertisement, in case you feel this is worthy of a donation you can transfer cryptocurrencies to one of the following addresses:\n<a href="https://bitcoin.org/en/">Bitcoin (₿)</a>: <a href="https://chain.so/address/BTC/3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF">3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF</a>\n<a href="https://litecoin.org/">Litecoin (<i><b>Ł</b></i>)</a>: <a href="https://chain.so/address/LTC/M9P84rgACh6eCfAGwxvN6K3vu2yQSu8kdG">M9P84rgACh6eCfAGwxvN6K3vu2yQSu8kdG</a>\n<a href="https://z.cash/">Zcash ()</a>: <a href="https://chain.so/address/ZEC/t1eHJCchE6SQSyXEdyogrSMAsR3hF6KDexw">t1eHJCchE6SQSyXEdyogrSMAsR3hF6KDexw</a></string>
+
+
+    <!-- Manual Page -->
+    <string name="manual_game_cooperative">With the CoGuess application you can play a cooperative guessing game in different ways. The goal is to guess as a group as many words within a limited time. Click <u>Start!</u> for the countdown to begin, then the first player takes the phone and presses <u>Reveal!</u> to show the word. The other people must guess the word and with the green and red buttons you can keep track of the scored points. Now the next players are up until the time runs out! You can try to bring across the word in many ways, see below for some examples.</string>
+    <string name="manual_lego_title">Lego</string>
+    <string name="manual_lego">Gather as many different Lego bricks as possible and build the words out of Lego.\nRecommended categories: Nature, Objects, Structures, Vehicles.</string>
+    <string name="manual_charades_title">Charades</string>
+    <string name="manual_charades">Bring across the word without making any sound whatsoever.\nRecommended categories: Nature, Objects, Structures, Vehicles.</string>
+    <string name="manual_drawing_title">Drawing</string>
+    <string name="manual_drawing">Just use pen and paper, a stick on the beach, or just about anything to draw the words.\nRecommended categories: Nature, Objects, Structures, Vehicles.</string>
+    <string name="manual_game_all_vs_all_title">All Vs. All</string>
+    <string name="manual_game_all_vs_all">This game mode only works while the explanation is clearly visible to all other players and you can guess while explaining. All players explain and guess at the same time, you get a point for a correct guess as well as a correct explanation.</string>
+
+
+    <!-- Wordset Page -->
+    <string name="wordset_text">Enter or delete custom words, you can enable or disable the complete set under settings. Current language: <u>%s</u>.</string>
+    <string name="wordset_enter_word">Enter new word ...</string>
+    <string name="wordset_word_added">New word added.</string>
+
+    <string name="options_wordset_new_list">Create New List</string>
+    <string name="options_wordset_new_list_title">List Name</string>
+    <string name="options_wordset_new_list_input">Enter a name for the new list:</string>
+    <string name="wordset_wordset_new_list_hint">Enter new list name ...</string>
+    <string name="options_wordset_new_list_created">New custom list created.</string>
+
+    <string name="options_wordset_delete_list">Delete List</string>
+    <string name="options_wordset_delete_confirmation">Delete this set of custom words?</string>
+
+    <string name="options_wordset_copy">Copy Words</string>
+    <string name="options_wordset_copy_toast">Word list with %d words copied to clipboard.</string>
+
+
+    <string name="options_wordset_paste">Paste Words</string>
+    <string name="options_wordset_paste_toast">Word list pasted from clipboard, %d out of %d words have been added.</string>
+</resources>
