@@ -1,0 +1,54 @@
+The contents of this application are licensed under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0) for all code and the CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) for all other content, except for those obtained from third-party sources. Below a list of all third-party sources and their respective licensing are found.
+
+
+
+List of used code:
+
+* SpanFormatter.java https://github.com/george-steel/android-utils/blob/master/src/org/oshkimaadziig/george/androidutils/SpanFormatter.java
+  License: Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+
+
+
+List of used materials:
+
+* Material design icons implemented directly or in adapted form from https://material.io/tools/icons/
+  License: Apache license version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+  Following icons were used and/or adapted:
+	- https://material.io/tools/icons/?icon=people&style=baseline
+	- https://material.io/tools/icons/?icon=delete&style=baseline
+	- https://material.io/tools/icons/?icon=g_translate&style=baseline
+	- https://material.io/tools/icons/?icon=image_search&style=baseline
+	- https://material.io/tools/icons/?icon=check_circle_outline&style=baseline
+	- https://material.io/tools/icons/?icon=highlight_off&style=baseline
+	- https://material.io/tools/icons/?icon=menu&style=baseline
+	- https://material.io/tools/icons/?icon=settings&style=baseline
+	- https://material.io/tools/icons/?icon=file_copy&style=baseline
+	- https://material.io/tools/icons/?icon=save_alt&style=baseline
+	- https://material.io/tools/icons/?icon=stars&style=baseline
+	- https://material.io/tools/icons/?icon=live_help&style=baseline
+	- https://material.io/tools/icons/?icon=info&style=baseline
+
+* Wikipedia icon from https://en.wikipedia.org/wiki/Wikipedia_logo#/media/File:Wikipedia-logo-v2.svg 
+  License: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+
+* Sound effects:
+	- cleared.ogg CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/) [http://www.freesound.org/people/broumbroum/sounds/50565/]
+	- error.ogg CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/) [https://github.com/openclonk/openclonk/blob/master/planet/Sound.ocg/UI.ocg/Error.ogg]
+	- tick.ogg CC BY 3.0 (origin currently unknown) [https://github.com/openclonk/openclonk/blob/master/planet/Sound.ocg/UI.ocg/Tick.ogg]
+
+* Bitcoin icon from https://commons.wikimedia.org/wiki/File:Bitcoin.svg
+  License: Public Domain
+
+* Litecoin icon from https://commons.wikimedia.org/wiki/File:Litecoin.svg
+  License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+* Zcash icon from https://z.cash/press/
+  License: CC BY 3.0 Unported (https://creativecommons.org/licenses/by/3.0/)
+
+
+
+List of used word sources:
+
+*
+
+*

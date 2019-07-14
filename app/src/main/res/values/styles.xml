@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Options Button -->
+    <style name="OverflowButtonStyle" parent="@style/Widget.AppCompat.ActionButton.Overflow" >
+        <item name="android:src">@drawable/ic_menu</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:tint">#FFFFFF</item>
+        <item name="android:background">@color/colorAppMain</item>
+    </style>
+
+    <!-- Action Bar -->
+    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid" >
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="background">@color/colorAppMain</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Status and Navigation -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <!-- Action Bar -->
+        <item name="actionBarSize">64dp</item>
+        <item name="android:actionBarSize">64dp</item>
+        <item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back</item>
+    </style>
+
+    <!-- Horizontal Divider -->
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+</resources>
+
+

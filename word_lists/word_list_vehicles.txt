@@ -1,0 +1,319 @@
+Monster truck # en # 1
+Monstertruck # de # 1
+Monstertruck # nl # 1
+
+Train # en # 1
+Zug # de # 1
+Trein # nl # 1
+
+Concorde # en # 2
+Concorde # de # 2
+Concorde # nl # 2
+
+Carriage # en # 2
+Kutsche # de # 2
+Koets # nl # 2
+
+Police car # en # 1
+Polizeiwagen # de # 1
+Politie auto # nl # 1
+
+Pirate ship # en # 1
+Piratenschiff # de # 1
+Piratenschip # nl # 1
+
+Motor bike # en # 1
+Motorrad # de # 1
+Motorfiets # nl # 1
+
+Mobile home # en # 1
+Mobilheim # de # 1
+Woonwagen # nl # 1
+
+Truck # en # 1
+Lastwagen # de # 1
+Vrachtwagen # nl # 1
+
+Jet ski # en # 1
+Jet-Ski # de # 1
+Jetski # nl # 1
+
+Ufo # en # 1
+Ufo # de # 1
+Ufo # nl # 1
+
+Forklift # en # 1
+Gabelstapler # de # 1
+Vorkheftruck # nl # 1
+
+Ambulance # en # 1
+Krankenwagen # de # 1
+Ambulance # nl # 1
+
+Crane truck # en # 1
+Kranwagen # de # 1
+Kraanwagen # nl # 1
+
+Wheelchair # en # 1
+Rollstuhl # de # 1
+Rolstoel # nl # 1
+
+Cruise ship # en # 1
+Kreuzfahrtschiff # de # 1
+Cruise schip # nl # 1
+
+Helicopter # en # 1
+Hubschrauber # de # 1
+Helicopter # nl # 1
+
+Tractor # en # 1
+Traktor # de # 1
+Tractor # nl # 1
+
+Garbage truck # en # 1
+Müllabfuhr # de # 1
+Vuilniswagen # nl # 1
+
+Container ship # en # 1
+Containerschiff # de # 1
+Containerschip # nl # 1
+
+Submarine # en # 1
+U-Boot # de # 1
+Onderzeëer # nl # 1
+
+Sailboat # en # 1
+Segelboot # de # 1
+Zeilboot # nl # 1
+
+Caravan # en # 1
+Wohnwagen # de # 1
+Caravan # nl # 1
+
+Ice cream van # en # 1
+Eisverkaufswagen # de # 1
+Ijscowagen # nl # 1
+
+Rowing boat # en # 1
+Ruderboot # de # 1
+Roeiboot # nl # 1
+
+Double-decker bus # en # 1
+Doppeldeckerbus # de # 1
+Dubbledeksbus # nl # 1
+
+Fire truck # en # 1
+Feuerwehrauto # de # 1
+Brandweerauto # nl # 1
+
+Kick scooter # en # 1
+Roller # de # 1
+Step # nl # 1
+
+Skateboard # en # 1
+Skateboard # de # 1
+Skateboard # nl # 1
+
+Rocket # en # 1
+Rakete # de # 1
+Raket # nl # 1
+
+Racing car # en # 1
+Rennwagen # de # 1
+Race auto # nl # 1
+
+Plane # en # 1
+Flugzeug # de # 1
+Vliegtuig # nl # 1
+
+Excavator # en # 1
+Bagger # de # 1
+Graafmachine # nl # 1
+
+Quad # en # 1
+Quad # de # 1
+Quad # nl # 1
+
+Sports car # en # 1
+Sportwagen # de # 1
+Sportauto # nl # 1
+
+Cargo plane # en # 1
+Frachflugzeug # de # 1
+Vrachtvliegtuig # nl # 1
+
+Camper van # en # 1
+Wohnmobil # de # 1
+Camper # nl # 1
+
+Canoe # en # 1
+Kanu # de # 1
+Kano # nl # 1
+
+Concrete mixer # en # 2
+Betonmischer # de # 2
+Betonmolen # nl # 2
+
+Tram # en # 2
+Straßenbahn # de # 2
+Tram # nl # 2
+
+Kart # en # 2
+Gokart # de # 2
+Kart # nl # 2
+
+Hot air balloon # en # 2
+Heißluftballon # de # 2
+Luchtballon # nl # 2
+
+ICE # en # 2
+ICE # de # 2
+ICE # nl # 2
+
+Harvester # en # 2
+Mähdrescher # de # 2
+Combine # nl # 2
+
+Sidecar motorcycle # en # 2
+Motorradgespann # de # 2
+Zijspancombinatie # nl # 2
+
+Snowmobile # en # 2
+Schneemobil # de # 2
+Sneeuwscooter # nl # 2
+
+Spaceship # en # 2
+Raumschiff # de # 2
+Ruimteschip # nl # 2
+
+Hang glider # en # 2
+Hängegleiter # de # 2
+Deltavlieger # nl # 2
+
+Bulldozer # en # 2
+Bulldozer # de # 2
+Bulldozer # nl # 2
+
+Steam locomotive # en # 2
+Dampflokomotive # de # 2
+Stoomtrein # nl # 2
+
+Waterplane # en # 2
+Wasserflugzeug # de # 2
+Watervliegtuig # nl # 2
+
+Viking ship # en # 2
+Wikinger schiff # de # 2
+Viking schip # nl # 2
+
+Road roller # en # 2
+Walze # de # 2
+Wals # nl # 2
+
+Steamboat # en # 2
+Dampfschiff # de # 2
+Stoomboot # nl # 2
+
+Speedboat # en # 2
+Rennboot # de # 2
+Speedboot # nl # 2
+
+Jeep # en # 2
+Jeep # de # 2
+Jeep # nl # 2
+
+Scooter # en # 2
+Moped # de # 2
+Scooter # nl # 2
+
+Raft # en # 2
+Floß # de # 2
+Vlot # nl # 2
+
+Pickup truck # en # 2
+Pickup # de # 2
+Pickup # nl # 2
+
+Sledge # en # 2
+Schlitten # de # 2
+Slee # nl # 2
+
+Snowboard # en # 2
+Snowboard # de # 2
+Snowboard # nl # 2
+
+Zeppelin # en # 2
+Zeppelin # de # 2
+Zeppelin # nl # 2
+
+Time trial bike # en # 2
+Zeitfahrrad # de # 2
+Tijdrijfiets # nl # 2
+
+Snowplough # en # 2
+Schneepflug # de # 2
+Sneeuwschuiver # nl # 2
+
+Security van # en # 2
+Geldtransporter # de # 2
+Geldtransport # nl # 2
+
+Lifeboat # en # 2
+Seenotrettungsboot # de # 2
+Reddingssloepe # nl # 2
+
+Mine cart # en # 2
+Lore # de # 2
+Mijnkar # nl # 2
+
+Jumbojet # en # 2
+Jumbojet # de # 2
+Jumbojet # nl # 2
+
+Tow truck # en # 2
+Abschleppwagen # de # 2
+Takelwagen # nl # 2
+
+Tandem bicycle # en # 2
+Tandem (Fahrrad) # de # 2
+Tandem (fiets) # nl # 2
+
+Waterski # en # 2
+Wasserski # de # 2
+Waterski # nl # 2
+
+Golf cart # en # 2
+Golfwagen # de # 2
+Golfwagen # nl # 2
+
+Icebreaker # en # 3
+Eisbrecher # de # 3
+Ijsbreker # nl # 3
+
+Elevator # en # 3
+Fahrstuhl # de # 3
+Lift # nl # 3
+
+Monorail # en # 3
+Einschienbahn # de # 3
+Monorail # nl # 3
+
+Segway # en # 3
+Segway # de # 3
+Segway # nl # 3
+
+Jetpack # en # 3
+Jetpack # de # 3
+Jetpack # nl # 3
+
+Ski lift # en # 3
+Skilift # de # 3
+Skilift # nl # 3
+
+Satellite # en # 3
+Satellit # de # 3
+Satelliet # nl # 3
+
+Cable car # en # 3
+Seilbahn # de # 3
+Kabelbaan # nl # 3

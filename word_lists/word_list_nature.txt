@@ -1,0 +1,355 @@
+Iceberg # en # 1
+Eisberg # de # 1
+Ijsberg # nl # 1
+
+Spider # en # 1
+Spinne # de # 1
+Spin # nl # 1
+
+Moon # en # 1
+Mond # de # 1
+Maan # nl # 1
+
+Sun # en # 1
+Sonne # de # 1
+Zon # nl # 1
+
+Leaf # en # 1
+Blatt # de # 1
+Blad # nl # 1
+
+Island # en # 1
+Insel # de # 1
+Eiland # nl # 1
+
+Rhino # en # 1
+Nashorn # de # 1
+Neushoorn # nl # 1
+
+Horse # en # 1
+Pferd # de # 1
+Paard # nl # 1
+
+Dromedary # en # 1
+Dromedar # de # 1
+Dromedaris # nl # 1
+
+Frog # en # 1
+Frosch # de # 1
+Kikker # nl # 1
+
+Snake # en # 1
+Schlange # de # 1
+Slang # nl # 1
+
+Flower # en # 1
+Blume # de # 1
+Bloem # nl # 1
+
+Snail # en # 1
+Schnecke # de # 1
+Slak # nl # 1
+
+Sheep # en # 1
+Schaf # de # 1
+Schaap # nl # 1
+
+Bird # en # 1
+Vogel # de # 1
+Vogel # nl # 1
+
+Beetle # en # 1
+Käfer # de # 1
+Kever # nl # 1
+
+Cactus # en # 1
+Kaktus # de # 1
+Cactus # nl # 1
+
+Clouds # en # 1
+Wolken # de # 1
+Wolken # nl # 1
+
+Giraffe # en # 1
+Giraffe # de # 1
+Giraffe # nl # 1
+
+Rainbow # en # 1
+Regenbogen # de # 1
+Regenboog # nl # 1
+
+Rabbit # en # 1
+Kaninchen # de # 1
+Konijn # nl # 1
+
+Mushroom # en # 1
+Pilz # de # 1
+Paddenstoel # nl # 1
+
+Fly # en # 1
+Fliege # de # 1
+Vlieg # nl # 1
+
+Chicken # en # 1
+Küken # de # 1
+Kuiken # nl # 1
+
+Penguin # en # 1
+Pinguin # de # 1
+Pinguïn # nl # 1
+
+Mountains # en # 1
+Berge # de # 1
+Bergen # nl # 1
+
+Shark # en # 1
+Hai # de # 1
+Haai # nl # 1
+
+Bee # en # 1
+Biene # de # 1
+Bei # nl # 1
+
+Lion # en # 1
+Löwe # de # 1
+Leeuw # nl # 1
+
+Turtle # en # 1
+Schildkröte # de # 1
+Schildpad # nl # 1
+
+Fish # en # 1
+Fisch # de # 1
+Vis # nl # 1
+
+Elephant # en # 1
+Elefant # de # 1
+Olifant # nl # 1
+
+Apple tree # en # 1
+Apfelbaum # de # 1
+Appelboom # nl # 1
+
+Butterfly # en # 1
+Schmetterling # de # 1
+Vlinder # nl # 1
+
+Volcano # en # 1
+Vulkan # de # 1
+Vulkaan # nl # 1
+
+Stork # en # 2
+Storch # de # 2
+Ooievaar # nl # 2
+
+Whale # en # 2
+Wal # de # 2
+Walvis # nl # 2
+
+Strawberry # en # 2
+Erdbeere # de # 2
+Aardbei # nl # 2
+
+Water lilly # en # 2
+Seerose # de # 2
+Waterlelie # nl # 2
+
+Cow # en # 1
+Kuh # de # 1
+Koe # nl # 1
+
+Crocodile # en # 1
+Krokodil # de # 1
+Krokodil # nl # 1
+
+Parrot # en # 1
+Papagei # de # 1
+Papegaai # nl # 1
+
+Banana # en # 1
+Banane # de # 1
+Banaan # nl # 1
+
+Cherries # en # 2
+Kirschen # de # 2
+Kersen # nl # 2
+
+Grapes # en # 2
+Trauben # de # 2
+Druiven # nl # 2
+
+Cock # en # 2
+Hahn # de # 2
+Haan # nl # 2
+
+Lobster # en # 2
+Hummer # de # 2
+Kreeft # nl # 2
+
+T-Rex # en # 2
+T-Rex # de # 2
+T-Rex # nl # 2
+
+Dragon # en # 2
+Drache # de # 2
+Draak # nl # 2
+
+Scorpion # en # 2
+Skorpion # de # 2
+Schorpioen # nl # 2
+
+Oyster # en # 2
+Auster # de # 2
+Oester # nl # 2
+
+Beaver # en # 2
+Biber # de # 2
+Bever # nl # 2
+
+Deer # en # 2
+Hirsch # de # 2
+Hert # nl # 2
+
+Carrot # en # 2
+Karotte # de # 2
+Wortel # nl # 2
+
+Cat # en # 2
+Katze # de # 2
+Kat # nl # 2
+
+Dog # en # 2
+Hund # de # 2
+Hond # nl # 2
+
+Dragonfly # en # 2
+Libelle # de # 2
+Libelle # nl # 2
+
+Rock # en # 2
+Felsen # de # 2
+Steen # nl # 2
+
+Monkey # en # 2
+Affe # de # 2
+Aap # nl # 2
+
+Rat # en # 2
+Ratte # de # 2
+Rat # nl # 2
+
+Octopus # en # 2
+Oktopus # de # 2
+Octopus # nl # 2
+
+Ostriche # en # 2
+Strauß # de # 2
+Struisvogel # nl # 2
+
+Kangaroo # en # 2
+Känguru # de # 2
+Kangoeroe # nl # 2
+
+Fox # en # 2
+Fuchs # de # 2
+Fos # nl # 2
+
+Branch # en # 2
+Zweig # de # 2
+Tak # nl # 2
+
+Watermelon # en # 2
+Wassermelone # de # 2
+Watermeloen # nl # 2
+
+Hedgehog # en # 2
+Igel # de # 2
+Egel # nl # 2
+
+Palm tree # en # 2
+Palme # de # 2
+Palm # nl # 2
+
+Starfish # en # 2
+Seestern # de # 2
+Zeestern # nl # 2
+
+Panda # en # 2
+Pandabär # de # 2
+Panda # nl # 2
+
+Peacock # en # 2
+Pfau # de # 2
+Pau # nl # 2
+
+Pear # en # 2
+Birne # de # 2
+Peer # nl # 2
+
+Cloverleaf # en # 2
+Kleeblatt # de # 2
+Klaverblad # nl # 2
+
+Seahorse # en # 2
+Seepferdchen # de # 2
+Zeepaardje # nl # 2
+
+Meteorite # en # 3
+Meteorit # de # 3
+Meteoriet # nl # 3
+
+Bat # en # 3
+Fledermaus # de # 3
+Vleermaus # nl # 3
+
+Tiger # en # 3
+Tiger # de # 3
+Tijger # nl # 3
+
+Squirrel # en # 3
+Eichhörnchen # de # 3
+Eekhoorntje # nl # 3
+
+Log # en # 3
+Holzklotz # de # 3
+Boomstam # nl # 3
+
+Bear # en # 3
+Bär # de # 3
+Beer # nl # 3
+
+Coconut # en # 3
+Kokosnuss # de # 3
+Kokosnoot # nl # 3
+
+Pig # en # 3
+Schwein # de # 3
+Varken # nl # 3
+
+Electric eel # en # 3
+Zitteraal # de # 3
+Sidderaal # nl # 3
+
+Swordfish # en # 3
+Schwertfisch # de # 3
+Zwaardvis # nl # 3
+
+Catterpillar # en # 3
+Raupe # de # 3
+Rups # nl # 3
+
+Glacier # en # 3
+Gletscher # de # 3
+Gletsjer # nl # 3
+
+Lizard # en # 3
+Eidechse # de # 3
+Hagedis # nl # 3
+
+Owl # en # 3
+Eule # de # 3
+Uil # nl # 3
+
+Lettuce # en # 3
+Salat # de # 3
+Slakrop # nl # 3

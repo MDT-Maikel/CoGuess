@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Colors -->
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#64B5F6</color>
+
+    <!-- App Colors -->
+    <color name="colorAppMain">#64B5F6</color>
+    <color name="colorAppGray">#D6D7D7</color>
+    <color name="colorAppText">#757575</color>
+    <color name="colorAppRed">#E57373</color>
+    <color name="colorAppGreen">#81C784</color>
+</resources>

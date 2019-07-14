@@ -1,0 +1,295 @@
+Wooden hut # en # 1
+Holzhütte # de # 1
+Houten hut # nl # 1
+
+Tree house # en # 1
+Baumhaus # de # 1
+Boomhut # nl # 1
+
+Labyrinth # en # 1
+Labyrinth # de # 1
+Doolhof # nl # 1
+
+Amusement park # en # 2
+Freizeitpark # de # 2
+Attractiepark # nl # 2
+
+Escalator # en # 2
+Rolltreppe # de # 2
+Roltrap # nl # 2
+
+Gas station # en # 1
+Tankstelle # de # 1
+Tankstation # nl # 1
+
+Space base # en # 1
+Raumbasis # de # 1
+Ruimtebasis # nl # 1
+
+Tunnel # en # 1
+Tunnel # de # 1
+Tunnel # nl # 1
+
+Petrol pump # en # 1
+Zapfsäule # de # 1
+Benzinepomp # nl # 1
+
+Wind generator # en # 1
+Windrad # de # 1
+Windturbine # nl # 1
+
+Greenhouse # en # 1
+Gewächshaus # de # 1
+Broeikas # nl # 1
+
+Airport # en # 1
+Flughafen # de # 1
+Vliegveld # nl # 1
+
+Skyscraper # en # 1
+Wolkenkratzer # de # 1
+Wolkenkrabber # nl # 1
+
+Lighthouse # en # 1
+Leuchtturm # de # 1
+Vuurtoren # nl # 1
+
+Windmill # en # 1
+Windmühle # de # 1
+Windmolen # nl # 1
+
+Factory # en # 1
+Fabrik # de # 1
+Fabriek # nl # 1
+
+House # en # 1
+Haus # de # 1
+Huis # nl # 1
+
+Tower # en # 1
+Turm # de # 1
+Toren # nl # 1
+
+Container harbor # en # 1
+Containerhafen # de # 1
+Containerhaven # nl # 1
+
+Swimming pool # en # 1
+Schwimmbecken # de # 1
+Zwembad # nl # 1
+
+Merry-go-round # en # 1
+Karussell # de # 1
+Carrousel # nl # 1
+
+Dog house # en # 1
+Hundehütte # de # 1
+Hondenhok # nl # 1
+
+Church # en # 1
+Kirche # de # 1
+Kerk # nl # 1
+
+Castle # en # 1
+Burg # de # 1
+Kasteel # nl # 1
+
+Igloo # en # 1
+Iglu # de # 1
+Igloo # nl # 1
+
+Fire station # en # 1
+Feuerwache # de # 1
+Brandweekazerne # nl # 1
+
+Garage # en # 1
+Garage # de # 1
+Garage # nl # 1
+
+Cemetery # en # 1
+Friedhof # de # 1
+Begraafplaats # nl # 1
+
+School # en # 1
+Schule # de # 1
+School # nl # 1
+
+Roundabout # en # 1
+Kreisel # de # 1
+Rotonde # nl # 1
+
+Pyramid # en # 1
+Pyramide # de # 1
+Pyramide # nl # 1
+
+Prison # en # 1
+Gefängnis # de # 1
+Gevangenis # nl # 1
+
+Hospital # en # 1
+Krankenhaus # de # 1
+Ziekenhuis # nl # 1
+
+Farm # en # 1
+Bauernhof # de # 1
+Boerderij # nl # 1
+
+Road # en # 1
+Straße # de # 1
+Straat # nl # 1
+
+Playground # en # 1
+Spielplatz # de # 1
+Speelplaats # nl # 1
+
+Football stadium # en # 1
+Fußballstadion # de # 1
+Voetbalstadion # nl # 1
+
+Crossroads # en # 1
+Kreuzung # de # 1
+Kruispunt # nl # 1
+
+Zoo # en # 1
+Zoo # de # 1
+Dierentuin # nl # 1
+
+Bridge # en # 1
+Brücke # de # 1
+Brug # nl # 1
+
+Parking lot # en # 1
+Parkplatz # de # 1
+Parkeerplaats # nl # 1
+
+Lock # en # 2
+Schleuse # de # 2
+Sluis # nl # 2
+
+Water mill # en # 2
+Wassermühle # de # 2
+Watermole # nl # 2
+
+Barrier # en # 2
+Schranke # de # 2
+Slagboom # nl # 2
+
+Slide # en # 2
+Rutsche # de # 2
+Glijbaan # nl # 2
+
+Embankment dam # en # 2
+Staudamm # de # 2
+Stuwdam # nl # 2
+
+Kiosk # en # 2
+Kiosk # de # 2
+Kiosk # nl # 2
+
+Tipi # en # 2
+Tipi # de # 2
+Tipi # nl # 2
+
+Power station # en # 2
+Kraftwerk # de # 2
+Energiecentrale # nl # 2
+
+Stage # en # 2
+Bühne # de # 2
+Podium # nl # 2
+
+Hotel # en # 2
+Hotel # de # 2
+Hotel # nl # 2
+
+Monument # en # 2
+Denkmal # de # 2
+Monument # nl # 2
+
+Parliament # en # 2
+Parlament # de # 2
+Parlament # nl # 2
+
+Sandcastle # en # 2
+Sandburg # de # 2
+Zandkasteel # nl # 2
+
+Racing track # en # 2
+Rennstrecke # de # 2
+Racebaan # nl # 2
+
+Swing # en # 2
+Schaukel # de # 2
+Schommel # nl # 2
+
+Parking garage # en # 2
+Parkhaus # de # 2
+Parkeergarage # nl # 2
+
+Villa # en # 2
+Villa # de # 2
+Villa # nl # 2
+
+Ice cream parlor # en # 2
+Eisdiele # de # 2
+Ijskraam # nl # 2
+
+Mosque # en # 2
+Moschee # de # 2
+Moskee # nl # 2
+
+Pizzeria # en # 2
+Pizzeria # de # 2
+Pizzeria # nl # 2
+
+Fountain # en # 2
+Springbrunnen # de # 2
+Fontein # nl # 2
+
+Pet shop # en # 2
+Tierhandlung # de # 2
+Dierenwinkel # nl # 2
+
+Ice hockey arena  # en # 2
+Icehockey Stadion # de # 2
+Ijshockey stadion # nl # 2
+
+Workshop # en # 2
+Werkstatt # de # 2
+Werkplaats # nl # 2
+
+Garden shed # en # 2
+Gartenhaus # de # 2
+Tuinhuis # nl # 2
+
+Train station # en # 2
+Bahnhof # de # 2
+Treinstation # nl # 2
+
+Solar park # en # 2
+Solaranlage # de # 2
+Zonnepanelenpark # nl # 2
+
+Well # en # 2
+Brunnen # de # 2
+Waterput # nl # 2
+
+Cinema # en # 2
+Kino # de # 2
+Bioscooop # nl # 2
+
+Legoland # en # 3
+Legoland # de # 3
+Legoland # nl # 3
+
+Lego store # en # 3
+Lego store # de # 3
+Lego store # nl # 3
+
+Circus tent # en # 3
+Zirkuszelt # de # 3
+Circustent # nl # 3
+
+Transmission tower # en # 3
+Strommast # de # 3
+Hoogspanningsmast # nl # 3

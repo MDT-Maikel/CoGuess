@@ -1,0 +1,15 @@
+*.iml
+.gradle
+.idea
+.DS_Store
+local.properties
+
+/build
+/misc
+
+/app/release
+/app/build
+/app/proguard-rules.pro
+
+/word_lists/*.db
+/word_lists/misc

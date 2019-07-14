@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorAppMain"
+    tools:context=".AboutActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/about_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_description"
+                    android:textSize="18sp" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_license_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_license_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_license"
+                    android:textSize="18sp" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_feedback_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_feedback_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_feedback"
+                    android:textSize="18sp" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_donation_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_donation_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_donation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_donation"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/about_donation_btc_icon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/ic_crypto_icon_btc"
+                            android:layout_weight="0" />
+
+                        <TextView
+                            android:id="@+id/about_donation_btc"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/about_donation_btc"
+                            android:textSize="18sp"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:id="@+id/about_donation_btc_copy"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="0"
+                            android:background="#FFFFFF"
+                            android:onClick="buttonOnCopyBitcoinClick"
+                            app:srcCompat="@drawable/ic_copy" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/about_donation_ltc_icon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/ic_crypto_icon_ltc"
+                            android:layout_weight="0"/>
+
+                        <TextView
+                            android:id="@+id/about_donation_ltc"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="@string/about_donation_ltc"
+                            android:textSize="18sp"
+                            android:layout_weight="1"/>
+
+                        <ImageButton
+                            android:id="@+id/about_donation_ltc_copy"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="0"
+                            android:background="#FFFFFF"
+                            android:onClick="buttonOnCopyLitecoinClick"
+                            app:srcCompat="@drawable/ic_copy"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/about_donation_zec_icon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/ic_crypto_icon_zec"
+                            android:layout_weight="0"/>
+
+                        <TextView
+                            android:id="@+id/about_donation_zec"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/about_donation_zec"
+                            android:textSize="18sp"
+                            android:layout_weight="1"/>
+
+                        <ImageButton
+                            android:id="@+id/about_donation_zec_copy"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="0"
+                            android:background="#FFFFFF"
+                            android:onClick="buttonOnCopyZCashClick"
+                            app:srcCompat="@drawable/ic_copy"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

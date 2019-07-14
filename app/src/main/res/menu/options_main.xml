@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/opt_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/options_settings" />
+
+    <item android:id="@+id/opt_high_scores"
+        android:icon="@drawable/ic_scores"
+        android:title="@string/options_high_scores" />
+
+    <item android:id="@+id/opt_wordset"
+        android:icon="@drawable/ic_list"
+        android:title="@string/options_wordset" />
+
+    <item android:id="@+id/opt_manual"
+        android:icon="@drawable/ic_manual"
+        android:title="@string/options_manual" />
+
+    <item android:id="@+id/opt_about"
+        android:icon="@drawable/ic_about"
+        android:title="@string/options_about" />
+
+</menu>
