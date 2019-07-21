@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoGuess</string>
+    <string name="text_score">0</string>
+    <string name="timer_start">Start!</string>
+    <string name="title_activity_manual">Spielanleitung</string>
+</resources>

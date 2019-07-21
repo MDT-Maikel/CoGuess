@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoGuess</string>
+    <string name="button_reveal">Onthul!</string>
+    <string name="button_show">Toon!</string>
+    <string name="delete_confirm">Bevestig</string>
+    <string name="delete_cancel">Annuleer</string>
+    <string name="score_delete_confirmation">Verwijder alle scores?</string>
+    <string name="display_achieved_score">Jouw team heeft %d punten gescoord. Bekijk the score tab om te zien hoe je het gedaan hebt.</string>
+    <string name="text_score">0</string>
+    <string name="timer_start">Begin!</string>
+    <string name="title_activity_manual">Handleiding</string>
+</resources>
