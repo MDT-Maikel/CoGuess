@@ -180,20 +180,24 @@ public class MainActivity extends AppCompatActivity
 
 	public void buttonOnDictClick(View v)
 	{
-		openURL("https://dict.leo.org/german-english/" + current_word);
+		String language = getSettingsLanguage();
+		if (language.equals("en") || language.equals("de"))
+			openURL("https://dict.leo.org/german-english/" + current_word);
+		else if (language.equals("nl"))
+			openURL("https://www.woorden.org/woord/" + current_word);
+		else
+			/* EMPTY */;
 	}
 
 	public void buttonOnWikiClick(View v)
 	{
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		String language = sharedConfig.getString("list_languages", "en");
+		String language = getSettingsLanguage();
 		openURL("https://" + language + ".wikipedia.org/wiki/" + current_word);
 	}
 
 	public void buttonOnGoogleClick(View v)
 	{
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		String language = sharedConfig.getString("list_languages", "en");
+		String language = getSettingsLanguage();
 		if (language.equals("en"))
 			language = "com";
 		openURL("https://www.google." + language + "/search?tbm=isch&q=" + current_word);
@@ -302,12 +306,11 @@ public class MainActivity extends AppCompatActivity
 
 	private void readWordsFromDatabase()
 	{
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
 		// Determine game language.
-		String language = sharedConfig.getString("list_languages", "en");
+		String language = getSettingsLanguage();
 		// Determine word set difficulty and type.
-		//Set<String> word_set_difficulties = sharedConfig.getStringSet("list_word_difficulties", null);
-		Set<String> word_set_categories = sharedConfig.getStringSet("list_word_categories", null);
+		//Set<String> word_set_difficulties = getSettingsWordDifficulties();
+		Set<String> word_set_categories = getSettingsWordCategories();
 		if (/*word_set_difficulties == null || */word_set_categories == null)
 			return;
 		int word_difficulties = 0;
@@ -322,11 +325,8 @@ public class MainActivity extends AppCompatActivity
 		// Get the specified words (difficulty and type).
 		word_list = db_wordset.getAllWords(language, Constants.WORDSET_DIFFICULTY_ALL/*word_difficulties*/, word_categories);
 
-		// Add custom words if specified.
-		if ((word_categories & Constants.WORDSET_CATEGORY_CUSTOM) != 0)
-		{
-			word_list.addAll(db_custom_wordset.getAllWords(language));
-		}
+		// Add custom word lists activated by user.
+		word_list.addAll(db_custom_wordset.getAllActivatedWords(language));
 
 		// Shuffle words.
 		Collections.shuffle(word_list);
@@ -344,48 +344,98 @@ public class MainActivity extends AppCompatActivity
 	public boolean addCustomWord(String word, String for_word_list)
 	{
 		// Use currently selected language.
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		String language = sharedConfig.getString("list_languages", "en");
+		String language = getSettingsLanguage();
 		return db_custom_wordset.insertWord(word, language, for_word_list);
 	}
 
-	public void deleteCustomWord(String word)
+	public void deleteCustomWord(String word, String for_word_list)
 	{
 		// Use currently selected language.
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		String language = sharedConfig.getString("list_languages", "en");
-		deleteCustomWord(word, language);
+		String language = getSettingsLanguage();
+		deleteCustomWord(word, language, for_word_list);
 	}
 
-	public void deleteCustomWord(String word, String language)
+	public void deleteCustomWord(String word, String language, String for_word_list)
 	{
-		db_custom_wordset.deleteWordByName(word, language);
+		db_custom_wordset.deleteWordByName(word, language, for_word_list);
 	}
 
-	public void deleteAllCustomWords()
+	public void deleteAllCustomWords(String for_word_list)
 	{
 		// Use currently selected language.
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		String language = sharedConfig.getString("list_languages", "en");
-		db_custom_wordset.deleteAllWords(language);
+		String language = getSettingsLanguage();
+		db_custom_wordset.deleteAllWords(language, for_word_list);
 	}
 
-	public ArrayList<String> getCustomWordSet()
+	public ArrayList<String> getCustomWordSet(String for_word_list)
 	{
 		// Determine game language and get corresponding custom word set.
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		String language = sharedConfig.getString("list_languages", "en");
-		return getCustomWordSet(language);
+		String language = getSettingsLanguage();
+		return getCustomWordSet(language, for_word_list);
 	}
 
-	public ArrayList<String> getCustomWordSet(String language)
+	public ArrayList<String> getCustomWordSet(String language, String for_word_list)
 	{
-		return db_custom_wordset.getAllWords(language);
+		return db_custom_wordset.getAllWords(language, for_word_list);
 	}
 
 	public DBWordSet getWordSetDatabase()
 	{
 		return db_wordset;
+	}
+
+	public boolean addCustomWordList(String word_list_name)
+	{
+		// Use currently selected language.
+		String language = getSettingsLanguage();
+		return db_custom_wordset.addWordList(word_list_name, language);
+	}
+
+	public ArrayList<String> getAllWordLists()
+	{
+		// Determine game language and get corresponding custom word set lists.
+		return db_custom_wordset.getAllWordLists(getSettingsLanguage());
+	}
+
+	public void setWordListActive(String word_list_name, boolean active)
+	{
+		db_custom_wordset.setWordListActive(word_list_name, getSettingsLanguage(), active);
+	}
+
+	public boolean getWordListActive(String word_list_name)
+	{
+		return db_custom_wordset.getWordListActive(word_list_name, getSettingsLanguage());
+	}
+
+
+	/* Settings */
+
+	// Returns the game language.
+	public String getSettingsLanguage()
+	{
+		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
+		return sharedConfig.getString("list_languages", "en");
+	}
+
+	// Returns the selected word difficulties.
+	public Set<String> getSettingsWordDifficulties()
+	{
+		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
+		return sharedConfig.getStringSet("list_word_difficulties", null);
+	}
+
+	// Returns the selected word categories.
+	public Set<String> getSettingsWordCategories()
+	{
+		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
+		return sharedConfig.getStringSet("list_word_categories", null);
+	}
+
+	// Returns the game language.
+	public String getSettingsTeamName()
+	{
+		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
+		return sharedConfig.getString("text_team_name", getString(R.string.string_pref_team_name_default));
 	}
 
 
@@ -404,9 +454,8 @@ public class MainActivity extends AppCompatActivity
 		toast.setGravity(Gravity.CENTER, 0, 0);
 		toast.show();
 
-		// Get game details.
-		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		String team_name = sharedConfig.getString("text_team_name", getString(R.string.string_pref_team_name_default));
+		// Get game team name.
+		String team_name = getSettingsTeamName();
 
 		// Insert score into database.
 		db_score.insertScore(team_name, score,"en", 30, "basic");
@@ -439,6 +488,7 @@ public class MainActivity extends AppCompatActivity
 		button_wrong.setOnTouchListener(new ButtonHighlighter(button_wrong));
 		ImageButton button_correct = (ImageButton) findViewById(R.id.image_button_correct);
 		button_correct.setOnTouchListener(new ButtonHighlighter(button_correct));
+		// TODO: Can we have a ripple circle effect on these buttons somehow instead of this?
 	}
 
 

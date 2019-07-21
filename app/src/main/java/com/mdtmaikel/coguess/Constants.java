@@ -18,8 +18,8 @@
 package com.mdtmaikel.coguess;
 
 
-public class Constants {
-
+public class Constants
+{
     // Word set difficulties.
     public static final int WORDSET_DIFFICULTY_NONE = 0;
     public static final int WORDSET_DIFFICULTY_BASIC = 1;
@@ -33,7 +33,5 @@ public class Constants {
     public static final int WORDSET_CATEGORY_OBJECTS = 2;
     public static final int WORDSET_CATEGORY_STRUCTURES = 4;
     public static final int WORDSET_CATEGORY_VEHICLES = 8;
-    public static final int WORDSET_CATEGORY_CUSTOM = 16;
     public static final int WORDSET_CATEGORY_ALL = ~0;
-
 }

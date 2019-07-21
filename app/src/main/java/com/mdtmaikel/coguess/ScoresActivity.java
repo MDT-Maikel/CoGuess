@@ -21,7 +21,6 @@ package com.mdtmaikel.coguess;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -55,10 +54,6 @@ public class ScoresActivity extends AppCompatActivity
             actionBar.setCustomView(R.layout.custom_action_bar_scores);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-        // Implement button highlighting.
-        ImageButton button_delete = (ImageButton) findViewById(R.id.image_button_delete);
-        button_delete.setOnTouchListener(new ButtonHighlighter(button_delete));
 
         // Create recycler view.
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_scores);

@@ -22,11 +22,12 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.InputType;
 import android.text.SpannableString;
-import android.text.method.DigitsKeyListener;
+import android.text.SpannedString;
+import android.text.method.TextKeyListener;
 import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -35,6 +36,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,7 +46,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -54,9 +56,11 @@ import java.util.Collections;
 
 public class WordSetActivity extends AppCompatActivity
 {
-    private RecyclerView recyclerView;
-    private WordSetRecyclerViewAdapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
+    private RecyclerView recycler_view;
+    private WordSetRecyclerViewAdapter m_adapter;
+    private RecyclerView.LayoutManager layout_manager;
+
+    private String current_word_list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -74,19 +78,27 @@ public class WordSetActivity extends AppCompatActivity
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        // Set text according to language.
-        SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-        String language = AppUtility.LanguageIDtoString(sharedConfig.getString("list_languages", "en"));
-        ((TextView) findViewById(R.id.text_about)).setText(SpanFormatter.format(getText(R.string.wordset_text), language));
+        // Retrieve current word list.
+        ArrayList<String> word_lists = MainActivity.getInstance().getAllWordLists();
+        if (!word_lists.isEmpty())
+        {
+            Collections.sort(word_lists, String.CASE_INSENSITIVE_ORDER);
+            current_word_list = word_lists.get(0);
+        }
+        SetCurrentWordListTitle();
 
         // Init edit text field.
         initEditTextField();
 
-        // Create recycler view.
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_wordset);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        // Init word list checkbox.
+        initWordListCheckbox();
 
+        // Create recycler view.
+        recycler_view = (RecyclerView) findViewById(R.id.recycler_view_wordset);
+        layout_manager = new LinearLayoutManager(this);
+        recycler_view.setLayoutManager(layout_manager);
+
+        // Update recycler list.
         updateListView();
     }
 
@@ -125,7 +137,8 @@ public class WordSetActivity extends AppCompatActivity
                 builder_new_list.setMessage(R.string.options_wordset_new_list_input);
                 final EditText input = new EditText(this);
                 input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
-                input.setKeyListener(DigitsKeyListener.getInstance("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäëïöüÄËÏÖÜß-"));
+                input.setKeyListener(TextKeyListener.getInstance(/*"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäëïöüÄËÏÖÜß-"*/));
+                input.setFilters(new InputFilter[] { new InputFilter.LengthFilter(20) });
                 input.setSingleLine(true);
                 input.setHint(R.string.wordset_wordset_new_list_hint);
                 builder_new_list.setView(input);
@@ -135,11 +148,22 @@ public class WordSetActivity extends AppCompatActivity
                             @Override
                             public void onClick(DialogInterface dialog, int which)
                             {
-                                String text = input.getText().toString();
-                                // TODO: make the new custom list.
-                                Toast toast_copy = Toast.makeText(getApplicationContext(), R.string.options_wordset_new_list_created, Toast.LENGTH_SHORT);
+                                String word_list_name = input.getText().toString();
+                                SpannedString msg = SpanFormatter.format(getString(R.string.options_wordset_new_list_not_created));
+                                if (MainActivity.getInstance().addCustomWordList(word_list_name))
+                                {
+                                    String language = AppUtility.LanguageIDtoString(MainActivity.getInstance().getSettingsLanguage());
+                                    msg = SpanFormatter.format(getString(R.string.options_wordset_new_list_created), word_list_name, language);
+                                }
+                                current_word_list = word_list_name;
+                                // Update title and word list.
+                                SetCurrentWordListTitle();
+                                updateListView();
+                                updateWordListCheckbox();
+                                // Notify user through a toast message.
+                                Toast toast_copy = Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG);
                                 toast_copy.setGravity(Gravity.CENTER, 0, 0);
-                                toast_copy.show();;
+                                toast_copy.show();
                             }
                         });
                 builder_new_list.setNegativeButton(R.string.delete_cancel,
@@ -183,8 +207,12 @@ public class WordSetActivity extends AppCompatActivity
                 return true;
 
             case R.id.opt_wordset_copy:
+                // Can not copy if there is no existing word list.
+                if (current_word_list == null)
+                    return true;
+
                 // Get custom word list.
-                ArrayList<String> wordset_list = (ArrayList<String>) MainActivity.getInstance().getCustomWordSet();
+                ArrayList<String> wordset_list = (ArrayList<String>) MainActivity.getInstance().getCustomWordSet(current_word_list);
 
                 // Copy all words of this list to the clipboard.
                 ClipboardManager clipboard_copy = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
@@ -198,6 +226,10 @@ public class WordSetActivity extends AppCompatActivity
                 return true;
 
             case R.id.opt_wordset_paste:
+                // Can not paste if there is no existing word list.
+                if (current_word_list == null)
+                    return true;
+
                 // Get word list from clipboard
                 String word_list = null;
                 ClipboardManager clipboard_paste = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
@@ -214,14 +246,6 @@ public class WordSetActivity extends AppCompatActivity
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void deleteWordList()
-    {
-        // Delete all words in this list.
-        MainActivity.getInstance().deleteAllCustomWords();
-        // Update word list.
-        updateListView();
     }
 
     public String getCustomWordListAsString(ArrayList<String> wordset_list)
@@ -246,7 +270,6 @@ public class WordSetActivity extends AppCompatActivity
         int[] result = new int[] {0, wordset_list.size()};
         for (String word : wordset_list)
         {
-            String current_word_list = "";
             if (MainActivity.getInstance().addCustomWord(word, current_word_list))
                 result[0]++;
         }
@@ -259,13 +282,16 @@ public class WordSetActivity extends AppCompatActivity
     public void updateListView()
     {
         // Get custom word set.
-        ArrayList<String> wordset_list = (ArrayList<String>) MainActivity.getInstance().getCustomWordSet();
+        ArrayList<String> wordset_list = new ArrayList<String>();
+        if (current_word_list != null)
+             wordset_list = MainActivity.getInstance().getCustomWordSet(current_word_list);
+
         // Reverse list so that last added word appears first.
         Collections.reverse(wordset_list);
 
         // Transfer words to recycler view.
-        mAdapter = new WordSetRecyclerViewAdapter(wordset_list);
-        recyclerView.setAdapter(mAdapter);
+        m_adapter = new WordSetRecyclerViewAdapter(wordset_list);
+        recycler_view.setAdapter(m_adapter);
         setOnItemListener();
     }
 
@@ -279,24 +305,31 @@ public class WordSetActivity extends AppCompatActivity
                     @Override
                     public boolean onEditorAction(TextView v, int actionId, KeyEvent event)
                     {
-                        if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_NEXT || (event != null &&
-                                event.getAction() == KeyEvent.ACTION_DOWN && event.getKeyCode() == KeyEvent.KEYCODE_ENTER))
+                        if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_NEXT || (event != null && event.getAction() == KeyEvent.ACTION_DOWN && event.getKeyCode() == KeyEvent.KEYCODE_ENTER))
                         {
                             if (event == null || !event.isShiftPressed())
                             {
-                                // TODO: Check if word already exists.
+                                // Get the entered word.
+                                EditText edit_text = findViewById(R.id.enter_wordset_word);
+                                String word = edit_text.getText().toString();
+
+                                // Reset text entry field.
+                                edit_text.setText(null);
+
+                                // Try to store word.
+                                if (word.isEmpty() || !MainActivity.getInstance().addCustomWord(word, current_word_list))
+                                {
+                                    // Show message that word is already in list.
+                                    Toast toast = Toast.makeText(getApplicationContext(), R.string.wordset_word_already_in_list, Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.CENTER, 0, 0);
+                                    toast.show();
+                                    return true;
+                                }
 
                                 // Show message that word has been added.
                                 Toast toast = Toast.makeText(getApplicationContext(), R.string.wordset_word_added, Toast.LENGTH_SHORT);
                                 toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.show();
-
-                                // Store and reset word.
-                                EditText edit_text = findViewById(R.id.enter_wordset_word);
-                                String word = edit_text.getText().toString();
-                                String current_word_list = "";
-                                MainActivity.getInstance().addCustomWord(word, current_word_list);
-                                edit_text.setText(null);
 
                                 // Update word list.
                                 updateListView();
@@ -311,18 +344,139 @@ public class WordSetActivity extends AppCompatActivity
 
     public void setOnItemListener()
     {
-        if (mAdapter != null)
+        if (m_adapter != null)
         {
-            mAdapter.setOnItemClick(new WordSetRecyclerViewAdapter.OnItemClickListener()
+            m_adapter.setOnItemClick(new WordSetRecyclerViewAdapter.OnItemClickListener()
             {
                 @Override
                 public void onItemClick(View view, String word)
                 {
                     // Delete clicked word.
-                    MainActivity.getInstance().deleteCustomWord(word);
+                    MainActivity.getInstance().deleteCustomWord(word, current_word_list);
                     updateListView();
                 }
             });
+        }
+    }
+
+
+    /*-- Word List Methods --*/
+
+    public void buttonOnSelectPreviousClick(View v)
+    {
+        ArrayList<String> word_lists = MainActivity.getInstance().getAllWordLists();
+        if (!word_lists.isEmpty())
+        {
+            int index = word_lists.indexOf(current_word_list);
+            index = Math.floorMod(index - 1, word_lists.size());
+            current_word_list = word_lists.get(index);
+            // Update title and word list.
+            SetCurrentWordListTitle();
+            updateListView();
+            updateWordListCheckbox();
+        }
+    }
+
+    public void buttonOnSelectNextClick(View v)
+    {
+        ArrayList<String> word_lists = MainActivity.getInstance().getAllWordLists();
+        if (!word_lists.isEmpty())
+        {
+            int index = word_lists.indexOf(current_word_list);
+            index = Math.floorMod(index + 1, word_lists.size());
+            current_word_list = word_lists.get(index);
+            // Update title and word list.
+            SetCurrentWordListTitle();
+            updateListView();
+            updateWordListCheckbox();
+        }
+    }
+
+    public void SetCurrentWordListTitle()
+    {
+        String language = MainActivity.getInstance().getSettingsLanguage();
+        String title_text = getString(R.string.wordset_no_list);
+        if (current_word_list != null)
+            title_text = current_word_list + " (" + language.toUpperCase() + ")";
+        ((TextView) findViewById(R.id.wordlist_current)).setText(title_text);
+    }
+
+
+    private void deleteWordList()
+    {
+        // Delete all words in the current list.
+        if (current_word_list != null)
+            MainActivity.getInstance().deleteAllCustomWords(current_word_list);
+        // Select another word list.
+        ArrayList<String> word_lists = MainActivity.getInstance().getAllWordLists();
+        if (!word_lists.isEmpty())
+        {
+            Collections.sort(word_lists, String.CASE_INSENSITIVE_ORDER);
+            current_word_list = word_lists.get(0);
+        }
+        else
+        {
+            current_word_list = null;
+        }
+        // Update title and word list.
+        SetCurrentWordListTitle();
+        updateListView();
+        updateWordListCheckbox();
+    }
+
+    public void initWordListCheckbox()
+    {
+        CheckBox checkbox = (CheckBox) findViewById(R.id.wordlist_checkbox_active);
+        checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+            {
+                @Override
+                public void onCheckedChanged(CompoundButton compound_button, boolean is_checked)
+                {
+                    // Only do stuff for user-press events.
+                    // TODO: This breaks accessibility mode! isPressed() is not true when it is triggered by a double tap from voice assistant mode.
+                    if (!compound_button.isPressed())
+                        return;
+
+                    if (is_checked)
+                    {
+                        // Make current word list active.
+                        MainActivity.getInstance().setWordListActive(current_word_list, true);
+                        // Show message that word is already in list.
+                        Toast toast = Toast.makeText(getApplicationContext(), String.format(getString(R.string.wordset_list_activated), current_word_list), Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    }
+                    else
+                    {
+                        // Make current word list inactive.
+                        MainActivity.getInstance().setWordListActive(current_word_list, false);
+                        // Show message that word is already in list.
+                        Toast toast = Toast.makeText(getApplicationContext(), String.format(getString(R.string.wordset_list_deactivated), current_word_list), Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    }
+                }
+            }
+        );
+        // Update checkbox.
+        updateWordListCheckbox();
+    }
+
+    public void updateWordListCheckbox()
+    {
+        CheckBox checkbox = (CheckBox) findViewById(R.id.wordlist_checkbox_active);
+        if (current_word_list == null)
+        {
+            checkbox.setVisibility(View.INVISIBLE);
+        }
+        else
+        {
+            checkbox.setVisibility(View.VISIBLE);
+            // Find whether current word list is active.
+            if (MainActivity.getInstance().getWordListActive(current_word_list))
+                checkbox.setChecked(true);
+            else
+                checkbox.setChecked(false);
         }
     }
 }

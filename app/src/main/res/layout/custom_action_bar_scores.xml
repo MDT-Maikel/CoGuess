@@ -27,7 +27,7 @@
         android:layout_height="match_parent"
         android:layout_weight="0"
         android:adjustViewBounds="true"
-        android:background="@color/colorAppMain"
+        android:background="?selectableItemBackgroundBorderless"
         android:cropToPadding="true"
         android:onClick="buttonOnDeleteClick"
         android:scaleType="fitCenter"

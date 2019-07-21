@@ -45,21 +45,18 @@
         <item>Objects</item>
         <item>Structures</item>
         <item>Vehicles</item>
-        <item>Custom</item>
     </string-array>
     <string-array name="pref_word_categories_values">
         <item>1</item>
         <item>2</item>
         <item>4</item>
         <item>8</item>
-        <item>16</item>
     </string-array>
     <string-array name="pref_word_categories_defaults">
         <item>1</item>
         <item>2</item>
         <item>4</item>
         <item>8</item>
-        <item>16</item>
     </string-array>
 
     <string-array name="pref_penalties">

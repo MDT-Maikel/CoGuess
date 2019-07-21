@@ -100,7 +100,7 @@ Igloo # nl # 1
 
 Fire station # en # 1
 Feuerwache # de # 1
-Brandweekazerne # nl # 1
+Brandweerkazerne # nl # 1
 
 Garage # en # 1
 Garage # de # 1
@@ -168,7 +168,7 @@ Sluis # nl # 2
 
 Water mill # en # 2
 Wassermühle # de # 2
-Watermole # nl # 2
+Watermolen # nl # 2
 
 Barrier # en # 2
 Schranke # de # 2

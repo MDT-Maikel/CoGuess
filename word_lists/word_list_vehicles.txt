@@ -100,7 +100,7 @@ Roeiboot # nl # 1
 
 Double-decker bus # en # 1
 Doppeldeckerbus # de # 1
-Dubbledeksbus # nl # 1
+Dubbeldeksbus # nl # 1
 
 Fire truck # en # 1
 Feuerwehrauto # de # 1
@@ -260,7 +260,7 @@ Geldtransport # nl # 2
 
 Lifeboat # en # 2
 Seenotrettungsboot # de # 2
-Reddingssloepe # nl # 2
+Reddingssloep # nl # 2
 
 Mine cart # en # 2
 Lore # de # 2

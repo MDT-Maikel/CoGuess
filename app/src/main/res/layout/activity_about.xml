@@ -164,7 +164,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:layout_weight="0"
-                            android:background="#FFFFFF"
+                            android:background="?selectableItemBackgroundBorderless"
                             android:onClick="buttonOnCopyBitcoinClick"
                             app:srcCompat="@drawable/ic_copy" />
 
@@ -202,7 +202,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:layout_weight="0"
-                            android:background="#FFFFFF"
+                            android:background="?selectableItemBackgroundBorderless"
                             android:onClick="buttonOnCopyLitecoinClick"
                             app:srcCompat="@drawable/ic_copy"/>
 
@@ -240,7 +240,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:layout_weight="0"
-                            android:background="#FFFFFF"
+                            android:background="?selectableItemBackgroundBorderless"
                             android:onClick="buttonOnCopyZCashClick"
                             app:srcCompat="@drawable/ic_copy"/>
 

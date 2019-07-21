@@ -336,7 +336,7 @@ Kettingzaag # nl # 2
 
 Blender # en # 3
 Mixgerät # de # 3
-BLender # nl # 3
+Blender # nl # 3
 
 Fire extinguisher # en # 3
 Feuerlöschgerät # de # 3

@@ -92,28 +92,32 @@
     <string name="manual_drawing_title">Drawing</string>
     <string name="manual_drawing">Just use pen and paper, a stick on the beach, or just about anything to draw the words.\nRecommended categories: Nature, Objects, Structures, Vehicles.</string>
     <string name="manual_explaining_title">Explaining</string>
-    <string name="manual_explaining">Explain the word while not mentioning it or any of its constituents. \nRecommended categories: All.</string>
+    <string name="manual_explaining">Explain the word while not mentioning it or any of its constituents. The difficulty can be increased by additional requirements, by for example only being allowed to mention a single word.\nRecommended categories: All.</string>
     <string name="manual_game_all_vs_all_title">All Vs. All</string>
     <string name="manual_game_all_vs_all">This game mode only works while the explanation is clearly visible to all other players and you can guess while explaining. All players explain and guess at the same time, you get a point for a correct guess as well as a correct explanation.</string>
 
 
     <!-- Wordset Page -->
-    <string name="wordset_text">Enter or delete custom words, you can enable or disable the complete set under settings. Current language: <u>%s</u>.</string>
     <string name="wordset_enter_word">Enter new word ...</string>
     <string name="wordset_word_added">New word added.</string>
+    <string name="wordset_word_already_in_list">New word not added, already exists in list.</string>
+    <string name="wordset_no_list">Create New List!</string>
+
+    <string name="wordset_list_activated">List %s is now activated for the game.</string>
+    <string name="wordset_list_deactivated">List %s is now deactivated for the game.</string>
 
     <string name="options_wordset_new_list">Create New List</string>
     <string name="options_wordset_new_list_title">List Name</string>
     <string name="options_wordset_new_list_input">Enter a name for the new list:</string>
     <string name="wordset_wordset_new_list_hint">Enter new list name ...</string>
-    <string name="options_wordset_new_list_created">New custom list created.</string>
+    <string name="options_wordset_new_list_created">New custom list %s created for language: <u>%s</u>.</string>
+    <string name="options_wordset_new_list_not_created">New custom list with this name already exists.</string>
 
     <string name="options_wordset_delete_list">Delete List</string>
     <string name="options_wordset_delete_confirmation">Delete this set of custom words?</string>
 
     <string name="options_wordset_copy">Copy Words</string>
     <string name="options_wordset_copy_toast">Word list with %d words copied to clipboard.</string>
-
 
     <string name="options_wordset_paste">Paste Words</string>
     <string name="options_wordset_paste_toast">Word list pasted from clipboard, %d out of %d words have been added.</string>

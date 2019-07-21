@@ -13,26 +13,84 @@
         android:layout_height="match_parent"
         android:background="#FFFFFF">
 
-        <TextView
-            android:id="@+id/text_about"
-            android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-light"
-            android:textSize="18sp"
+        <View
+            style="@style/Divider"
+            android:layout_marginTop="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorAppMain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/wordlist_select_previous"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="0"
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="buttonOnSelectPreviousClick"
+                app:srcCompat="@drawable/ic_arrow_left"/>
+
+            <TextView
+                android:id="@+id/wordlist_current"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/wordset_no_list"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/wordlist_checkbox_active"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="0"
+                android:checked="false"
+                android:button="@drawable/checkbox_white" />
+
+            <ImageButton
+                android:id="@+id/wordlist_select_next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="0"
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="buttonOnSelectNextClick"
+                app:srcCompat="@drawable/ic_arrow_right"/>
+
+        </LinearLayout>
+
         <View
             style="@style/Divider"
-            android:layout_marginTop="80dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_about"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,9 +101,8 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="82dp"
+            android:layout_marginTop="52dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäëïöüÄËÏÖÜß- "
             android:ems="10"
             android:hint="@string/wordset_enter_word"
@@ -59,8 +116,8 @@
 
         <View
             style="@style/Divider"
-            android:layout_marginTop="130dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_about"
+            android:layout_marginTop="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -71,9 +128,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="132dp"
+            android:layout_marginTop="102dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:scrollbars="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

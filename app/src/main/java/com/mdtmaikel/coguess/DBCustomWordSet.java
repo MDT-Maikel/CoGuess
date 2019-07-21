@@ -36,6 +36,8 @@ public class DBCustomWordSet extends SQLiteOpenHelper
     public static final String WORDSET_COLUMN_LANGUAGE = "language";
     public static final String WORDSET_COLUMN_WORD = "word";
     public static final String WORDSET_COLUMN_WORD_LIST_NAME = "word_list_name";
+    public static final String WORDSET_LIST_NAME_IDENTIFIER = "$$list$$identifier$$";
+    public static final String WORDSET_LIST_ACTIVE_IDENTIFIER = "$$list$$active$$";
 
     public DBCustomWordSet(Context context)
     {
@@ -61,6 +63,9 @@ public class DBCustomWordSet extends SQLiteOpenHelper
         onCreate(db);
     }
 
+
+    /*-- Custom Word Methods --*/
+
     public boolean insertWord(String word, String language, String for_word_list)
     {
         if (isExistingEntry(word, language, for_word_list))
@@ -80,7 +85,6 @@ public class DBCustomWordSet extends SQLiteOpenHelper
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("SELECT EXISTS (SELECT 1 FROM " + WORDSET_TABLE_NAME + " WHERE " + WORDSET_COLUMN_WORD + " = ? AND " + WORDSET_COLUMN_LANGUAGE + " = ? AND " + WORDSET_COLUMN_WORD_LIST_NAME + " = ?)", new String[] { word, language, for_word_list });
         res.moveToFirst();
-
         if (res.getInt(0) == 1)
         {
             res.close();
@@ -119,19 +123,24 @@ public class DBCustomWordSet extends SQLiteOpenHelper
         db.close();
     }
 
+    public void deleteAllWords(String only_for_language, String only_for_word_list)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(WORDSET_TABLE_NAME, WORDSET_COLUMN_LANGUAGE + " = ? AND " + WORDSET_COLUMN_WORD_LIST_NAME + " = ?", new String[] { only_for_language, only_for_word_list });
+        db.close();
+    }
 
-    public ArrayList<String> getAllWords(String language)
+    public ArrayList<String> getAllWords(String language, String for_word_list)
     {
         ArrayList<String> array_list = new ArrayList<String>();
-
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor =  db.rawQuery( "SELECT * FROM " + WORDSET_TABLE_NAME + " WHERE " + WORDSET_COLUMN_LANGUAGE + " = ?" , new String[] { language });
+        Cursor cursor =  db.rawQuery( "SELECT * FROM " + WORDSET_TABLE_NAME + " WHERE " + WORDSET_COLUMN_LANGUAGE + " = ? AND " + WORDSET_COLUMN_WORD_LIST_NAME + " = ?" , new String[] { language, for_word_list });
         cursor.moveToFirst();
-
         while (!cursor.isAfterLast())
         {
             String word = cursor.getString(cursor.getColumnIndex(WORDSET_COLUMN_WORD));
-            array_list.add(word);
+            if (!word.equals(WORDSET_LIST_NAME_IDENTIFIER) && !word.equals(WORDSET_LIST_ACTIVE_IDENTIFIER))
+                array_list.add(word);
             cursor.moveToNext();
         }
         db.close();
@@ -139,22 +148,76 @@ public class DBCustomWordSet extends SQLiteOpenHelper
         return array_list;
     }
 
-    public ArrayList<String> getAllWords(String language, String for_word_list)
+
+    /*-- Word List Methods --*/
+
+    public boolean addWordList(String word_list_name, String language)
+    {
+        if (isExistingEntry(WORDSET_LIST_NAME_IDENTIFIER, language, word_list_name))
+            return false;
+        return insertWord(WORDSET_LIST_NAME_IDENTIFIER, language, word_list_name);
+    }
+
+    public ArrayList<String> getAllWordLists(String language)
     {
         ArrayList<String> array_list = new ArrayList<String>();
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor =  db.rawQuery( "SELECT * FROM " + WORDSET_TABLE_NAME + " WHERE " + WORDSET_COLUMN_LANGUAGE + " = ? AND " + WORDSET_COLUMN_WORD_LIST_NAME + " = ?" , new String[] { language, for_word_list });
+        Cursor cursor =  db.rawQuery( "SELECT * FROM " + WORDSET_TABLE_NAME + " WHERE " + WORDSET_COLUMN_WORD + " = ? AND " + WORDSET_COLUMN_LANGUAGE + " = ?" , new String[] { WORDSET_LIST_NAME_IDENTIFIER, language });
         cursor.moveToFirst();
 
         while (!cursor.isAfterLast())
         {
-            String word = cursor.getString(cursor.getColumnIndex(WORDSET_COLUMN_WORD));
-            array_list.add(word);
+            String word_list = cursor.getString(cursor.getColumnIndex(WORDSET_COLUMN_WORD_LIST_NAME));
+            array_list.add(word_list);
             cursor.moveToNext();
         }
         db.close();
         cursor.close();
+        return array_list;
+    }
+
+    public void setWordListActive(String word_list_name, String language, boolean active)
+    {
+        if (active)
+        {
+            if (!isExistingEntry(WORDSET_LIST_ACTIVE_IDENTIFIER, language, word_list_name))
+                insertWord(WORDSET_LIST_ACTIVE_IDENTIFIER, language, word_list_name);
+        }
+        else
+        {
+            deleteWordByName(WORDSET_LIST_ACTIVE_IDENTIFIER, language, word_list_name);
+        }
+    }
+
+    public boolean getWordListActive(String word_list_name, String language)
+    {
+        return isExistingEntry(WORDSET_LIST_ACTIVE_IDENTIFIER, language, word_list_name);
+    }
+
+    public ArrayList<String> getAllActivatedWords(String language)
+    {
+        ArrayList<String> array_list = new ArrayList<String>();
+        // Get active word lists for this language.
+        ArrayList<String> active_word_lists = getAllWordLists(language);
+        active_word_lists.removeIf(word_list -> !getWordListActive(word_list, language));
+
+        // Loop over all active word lists.
+        for (String word_list : active_word_lists)
+        {
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor =  db.rawQuery( "SELECT * FROM " + WORDSET_TABLE_NAME + " WHERE " + WORDSET_COLUMN_LANGUAGE + " = ? AND " + WORDSET_COLUMN_WORD_LIST_NAME + " = ?" , new String[] { language, word_list });
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast())
+            {
+                String word = cursor.getString(cursor.getColumnIndex(WORDSET_COLUMN_WORD));
+                if (!word.equals(WORDSET_LIST_NAME_IDENTIFIER) && !word.equals(WORDSET_LIST_ACTIVE_IDENTIFIER))
+                    array_list.add(word);
+                cursor.moveToNext();
+            }
+            db.close();
+            cursor.close();
+        }
         return array_list;
     }
 }

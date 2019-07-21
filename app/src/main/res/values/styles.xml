@@ -42,8 +42,14 @@
     <!-- Horizontal Divider -->
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_height">2dp</item>
         <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <!-- Checkbox white -->
+    <style name="CheckBoxWhite" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
     </style>
 
 </resources>
