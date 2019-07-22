@@ -23,10 +23,8 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -75,9 +73,7 @@ public class AboutActivity extends AppCompatActivity
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("btc_address", getString(R.string.about_donation_btc_address));
         clipboard.setPrimaryClip(clip);
-        Toast toast = Toast.makeText(getApplicationContext(), R.string.about_donation_copied_address_btc, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+        AppUtility.displayToastShort(getApplicationContext(), R.string.about_donation_copied_address_btc);
     }
 
     public void buttonOnCopyLitecoinClick(View v)
@@ -85,9 +81,7 @@ public class AboutActivity extends AppCompatActivity
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("ltc_address", getString(R.string.about_donation_ltc_address));
         clipboard.setPrimaryClip(clip);
-        Toast toast = Toast.makeText(getApplicationContext(), R.string.about_donation_copied_address_ltc, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+        AppUtility.displayToastShort(getApplicationContext(), R.string.about_donation_copied_address_ltc);
     }
 
     public void buttonOnCopyZCashClick(View v)
@@ -95,8 +89,6 @@ public class AboutActivity extends AppCompatActivity
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("zec_address", getString(R.string.about_donation_zec_address));
         clipboard.setPrimaryClip(clip);
-        Toast toast = Toast.makeText(getApplicationContext(), R.string.about_donation_copied_address_zec, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+        AppUtility.displayToastShort(getApplicationContext(), R.string.about_donation_copied_address_zec);
     }
 }

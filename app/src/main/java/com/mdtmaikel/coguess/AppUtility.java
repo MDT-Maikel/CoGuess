@@ -18,6 +18,12 @@
 package com.mdtmaikel.coguess;
 
 
+import android.content.Context;
+import android.text.SpannedString;
+import android.view.Gravity;
+import android.widget.Toast;
+
+
 public class AppUtility
 {
     // Returns language name according to language/country code.
@@ -32,4 +38,49 @@ public class AppUtility
         return "Unknown Language";
     }
 
+
+    /*-- Toast Wrappers --*/
+
+    public static void displayToastLong(Context ctx, String msg)
+    {
+        Toast toast = Toast.makeText(ctx, msg, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    public static void displayToastShort(Context ctx, String msg)
+    {
+        Toast toast = Toast.makeText(ctx, msg, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    public static void displayToastLong(Context ctx, SpannedString msg)
+    {
+        Toast toast = Toast.makeText(ctx, msg, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    public static void displayToastShort(Context ctx, SpannedString msg)
+    {
+        Toast toast = Toast.makeText(ctx, msg, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    public static void displayToastLong(Context ctx, int msg_id)
+    {
+        Toast toast = Toast.makeText(ctx, msg_id, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    public static void displayToastShort(Context ctx, int msg_id)
+    {
+        Toast toast = Toast.makeText(ctx, msg_id, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
 }
+

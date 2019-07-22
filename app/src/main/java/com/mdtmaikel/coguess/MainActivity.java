@@ -32,7 +32,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -41,7 +40,6 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.lang.Math;
@@ -116,16 +114,12 @@ public class MainActivity extends AppCompatActivity
 			initWordList();
 			if (word_list.isEmpty())
 			{
-				Toast toast = Toast.makeText(getApplicationContext(), R.string.no_word_set_selected, Toast.LENGTH_SHORT);
-				toast.setGravity(Gravity.CENTER, 0, 0);
-				toast.show();
+				AppUtility.displayToastShort(getApplicationContext(), R.string.no_word_set_selected);
 				return;
 			}
 			else
 			{
-				Toast toast = Toast.makeText(getApplicationContext(), String.format(getResources().getString(R.string.display_word_set_size), word_list.size()), Toast.LENGTH_SHORT);
-				toast.setGravity(Gravity.CENTER, 0, 0);
-				toast.show();
+				AppUtility.displayToastShort(getApplicationContext(), String.format(getResources().getString(R.string.display_word_set_size), word_list.size()));
 			}
 
 
@@ -450,9 +444,7 @@ public class MainActivity extends AppCompatActivity
 	private void storeScore()
 	{
 		// Show amount of points scored.
-		Toast toast = Toast.makeText(getApplicationContext(), String.format(getResources().getString(R.string.display_achieved_score), score), Toast.LENGTH_SHORT);
-		toast.setGravity(Gravity.CENTER, 0, 0);
-		toast.show();
+		AppUtility.displayToastShort(getApplicationContext(), String.format(getResources().getString(R.string.display_achieved_score), score));
 
 		// Get game team name.
 		String team_name = getSettingsTeamName();

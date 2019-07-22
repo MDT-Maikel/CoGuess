@@ -29,7 +29,6 @@ import android.text.SpannableString;
 import android.text.SpannedString;
 import android.text.method.TextKeyListener;
 import android.text.style.ForegroundColorSpan;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -40,7 +39,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -161,9 +159,7 @@ public class WordSetActivity extends AppCompatActivity
                                 updateListView();
                                 updateWordListCheckbox();
                                 // Notify user through a toast message.
-                                Toast toast_copy = Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG);
-                                toast_copy.setGravity(Gravity.CENTER, 0, 0);
-                                toast_copy.show();
+                                AppUtility.displayToastLong(getApplicationContext(), msg);
                             }
                         });
                 builder_new_list.setNegativeButton(R.string.delete_cancel,
@@ -220,9 +216,7 @@ public class WordSetActivity extends AppCompatActivity
                 clipboard_copy.setPrimaryClip(clip);
 
                 // Show message that list has been copied to clipboard.
-                Toast toast_copy = Toast.makeText(getApplicationContext(), String.format(getResources().getString(R.string.options_wordset_copy_toast), wordset_list.size()), Toast.LENGTH_LONG);
-                toast_copy.setGravity(Gravity.CENTER, 0, 0);
-                toast_copy.show();
+                AppUtility.displayToastLong(getApplicationContext(), String.format(getResources().getString(R.string.options_wordset_copy_toast), wordset_list.size()));
                 return true;
 
             case R.id.opt_wordset_paste:
@@ -240,9 +234,7 @@ public class WordSetActivity extends AppCompatActivity
                 int[] result = importCustomWordListFromString(word_list);
 
                 // Show message that list has been pasted from clipboard.
-                Toast toast_paste = Toast.makeText(getApplicationContext(), String.format(getResources().getString(R.string.options_wordset_paste_toast), result[0], result[1]), Toast.LENGTH_LONG);
-                toast_paste.setGravity(Gravity.CENTER, 0, 0);
-                toast_paste.show();
+                AppUtility.displayToastLong(getApplicationContext(), String.format(getResources().getString(R.string.options_wordset_paste_toast), result[0], result[1]));
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -320,16 +312,12 @@ public class WordSetActivity extends AppCompatActivity
                                 if (word.isEmpty() || !MainActivity.getInstance().addCustomWord(word, current_word_list))
                                 {
                                     // Show message that word is already in list.
-                                    Toast toast = Toast.makeText(getApplicationContext(), R.string.wordset_word_already_in_list, Toast.LENGTH_SHORT);
-                                    toast.setGravity(Gravity.CENTER, 0, 0);
-                                    toast.show();
+                                    AppUtility.displayToastShort(getApplicationContext(), R.string.wordset_word_already_in_list);
                                     return true;
                                 }
 
                                 // Show message that word has been added.
-                                Toast toast = Toast.makeText(getApplicationContext(), R.string.wordset_word_added, Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
+                                AppUtility.displayToastShort(getApplicationContext(), R.string.wordset_word_added);
 
                                 // Update word list.
                                 updateListView();
@@ -442,18 +430,14 @@ public class WordSetActivity extends AppCompatActivity
                         // Make current word list active.
                         MainActivity.getInstance().setWordListActive(current_word_list, true);
                         // Show message that word is already in list.
-                        Toast toast = Toast.makeText(getApplicationContext(), String.format(getString(R.string.wordset_list_activated), current_word_list), Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
+                        AppUtility.displayToastLong(getApplicationContext(), String.format(getString(R.string.wordset_list_activated), current_word_list));
                     }
                     else
                     {
                         // Make current word list inactive.
                         MainActivity.getInstance().setWordListActive(current_word_list, false);
                         // Show message that word is already in list.
-                        Toast toast = Toast.makeText(getApplicationContext(), String.format(getString(R.string.wordset_list_deactivated), current_word_list), Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
+                        AppUtility.displayToastLong(getApplicationContext(), String.format(getString(R.string.wordset_list_deactivated), current_word_list));
                     }
                 }
             }
