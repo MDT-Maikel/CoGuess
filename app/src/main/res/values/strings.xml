@@ -101,6 +101,7 @@
     <string name="wordset_enter_word">Enter new word ...</string>
     <string name="wordset_word_added">New word added.</string>
     <string name="wordset_word_already_in_list">New word not added, already exists in list.</string>
+    <string name="wordset_word_no_list_available">No list available, create a new list first.</string>
     <string name="wordset_no_list">Create New List!</string>
 
     <string name="wordset_list_activated">List %s is now activated for the game.</string>

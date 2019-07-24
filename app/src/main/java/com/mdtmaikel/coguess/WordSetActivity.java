@@ -38,6 +38,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
@@ -128,18 +129,26 @@ public class WordSetActivity extends AppCompatActivity
         switch (id)
         {
             case R.id.opt_wordset_new_list:
-                // Open dialog to enter name.
+                // Open dialog to enter name using alert dialog and edit text.
                 AlertDialog.Builder builder_new_list = new AlertDialog.Builder(this);
                 builder_new_list.setCancelable(true);
                 builder_new_list.setTitle(R.string.options_wordset_new_list_title);
                 builder_new_list.setMessage(R.string.options_wordset_new_list_input);
+                // Put the edit text in a linear layout to fit the alert dialog better.
                 final EditText input = new EditText(this);
                 input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
                 input.setKeyListener(TextKeyListener.getInstance(/*"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäëïöüÄËÏÖÜß-"*/));
                 input.setFilters(new InputFilter[] { new InputFilter.LengthFilter(20) });
                 input.setSingleLine(true);
                 input.setHint(R.string.wordset_wordset_new_list_hint);
-                builder_new_list.setView(input);
+                LinearLayout layout = new LinearLayout(this);
+                layout.setOrientation(LinearLayout.VERTICAL);
+                LinearLayout.LayoutParams layout_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+                int side_margin = 60;
+                layout_params.setMargins(side_margin, 0, side_margin, 0);
+                layout.addView(input, layout_params);
+                builder_new_list.setView(layout);
+                // Retrieve list name on confirmation.
                 builder_new_list.setPositiveButton(R.string.delete_confirm,
                         new DialogInterface.OnClickListener()
                         {
@@ -307,6 +316,14 @@ public class WordSetActivity extends AppCompatActivity
 
                                 // Reset text entry field.
                                 edit_text.setText(null);
+
+                                // Check current word list.
+                                if (current_word_list == null)
+                                {
+                                    // Show message that there is no list the word can be added to.
+                                    AppUtility.displayToastShort(getApplicationContext(), R.string.wordset_word_no_list_available);
+                                    return true;
+                                }
 
                                 // Try to store word.
                                 if (word.isEmpty() || !MainActivity.getInstance().addCustomWord(word, current_word_list))

@@ -47,6 +47,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 
@@ -321,6 +322,11 @@ public class MainActivity extends AppCompatActivity
 
 		// Add custom word lists activated by user.
 		word_list.addAll(db_custom_wordset.getAllActivatedWords(language));
+
+		// Delete duplicate word list entries, maintaining the order is irrelevant.
+		Set word_list_set = new LinkedHashSet(word_list);
+		word_list.clear();
+		word_list.addAll(word_list_set);
 
 		// Shuffle words.
 		Collections.shuffle(word_list);
