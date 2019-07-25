@@ -5,6 +5,14 @@ All word lists are separated by category, these are:
 * Vehicles	- .
 * Structures    - .
 
+Allowed characters for words in the list are:
+* [A-Z]
+* [a-z]
+* äëïöüÄËÏÖÜß
+* single whitespace:  
+* hyphen: -
+* round brackets: ()
+
 
 The words in these lists are formatted like this:
 [WORD] # [LANGUAGE CODE] # [DIFFICULTY]
@@ -16,11 +24,11 @@ Insel # de # 1
 Eiland # nl # 1
 
 
-The Language codes are:
+The currently used language codes are:
 en, de, nl
 
 
-The difficulties are:
+The difficulties are indicated by a bitmask so that you can select any combination of them:
 * 1 - Basic
 * 2 - Intermediate
 * 4 - Advanced 

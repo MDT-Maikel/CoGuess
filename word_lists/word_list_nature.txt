@@ -14,6 +14,10 @@ Sun # en # 1
 Sonne # de # 1
 Zon # nl # 1
 
+Star # en # 1
+Stern # de # 1
+Ster # nl # 1
+
 Leaf # en # 1
 Blatt # de # 1
 Blad # nl # 1
@@ -33,6 +37,10 @@ Paard # nl # 1
 Dromedary # en # 1
 Dromedar # de # 1
 Dromedaris # nl # 1
+
+Dolphin # en # 1
+Delphin # de # 1
+Dolfijn # nl # 1
 
 Frog # en # 1
 Frosch # de # 1
@@ -214,6 +222,10 @@ Carrot # en # 2
 Karotte # de # 2
 Wortel # nl # 2
 
+Tomato # en # 2
+Tomate # de # 2
+Tomaat # nl # 2
+
 Cat # en # 2
 Katze # de # 2
 Kat # nl # 2
@@ -221,6 +233,10 @@ Kat # nl # 2
 Dog # en # 2
 Hund # de # 2
 Hond # nl # 2
+
+Pumpkin # en # 2
+Kürbis # de # 2
+Pompoen # nl # 2
 
 Dragonfly # en # 2
 Libelle # de # 2
@@ -274,6 +290,10 @@ Starfish # en # 2
 Seestern # de # 2
 Zeestern # nl # 2
 
+Pelican # en # 2
+Pelikan # de # 2
+Pelikaan # nl # 2
+
 Panda # en # 2
 Pandabär # de # 2
 Panda # nl # 2
@@ -294,62 +314,94 @@ Seahorse # en # 2
 Seepferdchen # de # 2
 Zeepaardje # nl # 2
 
-Meteorite # en # 3
-Meteorit # de # 3
-Meteoriet # nl # 3
+Meteorite # en # 4
+Meteorit # de # 4
+Meteoriet # nl # 4
 
-Bat # en # 3
-Fledermaus # de # 3
-Vleermaus # nl # 3
+Bat # en # 4
+Fledermaus # de # 4
+Vleermaus # nl # 4
 
-Tiger # en # 3
-Tiger # de # 3
-Tijger # nl # 3
+Tiger # en # 4
+Tiger # de # 4
+Tijger # nl # 4
 
-Squirrel # en # 3
-Eichhörnchen # de # 3
-Eekhoorntje # nl # 3
+Squirrel # en # 4
+Eichhörnchen # de # 4
+Eekhoorntje # nl # 4
 
-Log # en # 3
-Holzklotz # de # 3
-Boomstam # nl # 3
+Log # en # 4
+Holzklotz # de # 4
+Boomstam # nl # 4
 
-Bear # en # 3
-Bär # de # 3
-Beer # nl # 3
+Bear # en # 4
+Bär # de # 4
+Beer # nl # 4
 
-Coconut # en # 3
-Kokosnuss # de # 3
-Kokosnoot # nl # 3
+Coconut # en # 4
+Kokosnuss # de # 4
+Kokosnoot # nl # 4
 
-Pig # en # 3
-Schwein # de # 3
-Varken # nl # 3
+Pig # en # 4
+Schwein # de # 4
+Varken # nl # 4
 
-Electric eel # en # 3
-Zitteraal # de # 3
-Sidderaal # nl # 3
+Electric eel # en # 4
+Zitteraal # de # 4
+Sidderaal # nl # 4
 
-Swordfish # en # 3
-Schwertfisch # de # 3
-Zwaardvis # nl # 3
+Swordfish # en # 4
+Schwertfisch # de # 4
+Zwaardvis # nl # 4
 
-Catterpillar # en # 3
-Raupe # de # 3
-Rups # nl # 3
+Catterpillar # en # 4
+Raupe # de # 4
+Rups # nl # 4
 
-Glacier # en # 3
-Gletscher # de # 3
-Gletsjer # nl # 3
+Glacier # en # 4
+Gletscher # de # 4
+Gletsjer # nl # 4
 
-Lizard # en # 3
-Eidechse # de # 3
-Hagedis # nl # 3
+Lightning # en # 4
+Blitz # de # 4
+Bliksem # nl # 4
 
-Owl # en # 3
-Eule # de # 3
-Uil # nl # 3
+Lizard # en # 4
+Eidechse # de # 4
+Hagedis # nl # 4
 
-Lettuce # en # 3
-Salat # de # 3
-Slakrop # nl # 3
+Owl # en # 4
+Eule # de # 4
+Uil # nl # 4
+
+Lettuce # en # 4
+Salat # de # 4
+Slakrop # nl # 4
+
+Arm # en # 1
+Arm # de # 1
+Arm # nl # 1
+
+Leg # en # 1
+Bein # de # 1
+Been # nl # 1
+
+Hand # en # 1
+Hand # de # 1
+Hand # nl # 1
+
+Foot # en # 1
+Fuß # de # 1
+Voet # nl # 1
+
+Finger # en # 1
+Finger # de # 1
+Vinger # nl # 1
+
+Toe # en # 1
+Zeh # de # 1
+Teen # nl # 1
+
+Head # en # 1
+Kopf # de # 1
+Hoofd # nl # 1

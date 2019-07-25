@@ -14,7 +14,6 @@ WORDSET_CATEGORY_NATURE = 1;
 WORDSET_CATEGORY_OBJECTS = 2;
 WORDSET_CATEGORY_STRUCTURES = 4;
 WORDSET_CATEGORY_VEHICLES = 8;
-WORDSET_CATEGORY_CUSTOM = 16;
 WORDSET_CATEGORY_ALL = ~0;
 
 
@@ -24,12 +23,23 @@ def convert_line_to_word_properties(line):
 	if len(line_split) < 3:
 		return
 	word = line_split[0][:-1]
+	if len(word) <= 0:
+		return
 	language = re.search('[a-z]+', line_split[1]).group()
 	difficulty = int(re.search('[0-9]+', line_split[2]).group())
 	return [word, language, difficulty]
 
+# checks the file for wrong contents
+def check_word_list_file(lines):
+	for line in lines:
+		regex_match = '[^a-zA-Z#\n 124äëïöüÄËÏÖÜß\-()]+'
+		if re.search(regex_match, line, re.UNICODE):
+			return False
+	return True
 
-# read from database text files
+
+# read from database text files and associate with categoties
+print("reading word lists ...")
 words = []
 database_files = [
 	['word_list_nature.txt', WORDSET_CATEGORY_NATURE],
@@ -40,6 +50,9 @@ database_files = [
 for file in database_files:
 	with open(file[0], 'r') as f:
 		lines = f.readlines()
+		if not check_word_list_file(lines):
+			print('WARNING: wrong contents in ' + file[0] + ', ignoring this file')
+			continue
 		word_category = file[1]
 		# extract word and properties from the read line.
 		add_words = [convert_line_to_word_properties(line) for line in lines]	
@@ -47,11 +60,9 @@ for file in database_files:
 		# add to words list.
 		words += add_words
 
-for word in words:
-	print(word)
-
 
 # create merged database
+print("creating database ...")
 if os.path.isfile('initial_wordset_database_merged.db'):
 	os.remove('initial_wordset_database_merged.db')
 conn = sqlite3.connect('initial_wordset_database_merged.db')
@@ -69,10 +80,16 @@ for word in words:
 
 
 # copy database to raw folder
+print("copying database ...")
 db_path = '../app/src/main/res/raw/initial_wordset_database.db'
 if os.path.isfile(db_path):
 	os.remove(db_path)
 shutil.copyfile('initial_wordset_database_merged.db', db_path)
+
+
+# finished
+print("finished!")
+
 
 
 

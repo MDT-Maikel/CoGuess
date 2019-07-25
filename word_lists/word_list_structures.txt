@@ -250,6 +250,10 @@ Pet shop # en # 2
 Tierhandlung # de # 2
 Dierenwinkel # nl # 2
 
+Hangar # en # 2
+Flugzeughalle # de # 2
+Hangaar # nl # 2
+
 Ice hockey arena  # en # 2
 Icehockey Stadion # de # 2
 Ijshockey stadion # nl # 2
@@ -278,18 +282,26 @@ Cinema # en # 2
 Kino # de # 2
 Bioscooop # nl # 2
 
-Legoland # en # 3
-Legoland # de # 3
-Legoland # nl # 3
+Legoland # en # 4
+Legoland # de # 4
+Legoland # nl # 4
 
-Lego store # en # 3
-Lego store # de # 3
-Lego store # nl # 3
+Lego store # en # 4
+Lego store # de # 4
+Lego store # nl # 4
 
-Circus tent # en # 3
-Zirkuszelt # de # 3
-Circustent # nl # 3
+Circus tent # en # 4
+Zirkuszelt # de # 4
+Circustent # nl # 4
 
-Transmission tower # en # 3
-Strommast # de # 3
-Hoogspanningsmast # nl # 3
+Transmission tower # en # 4
+Strommast # de # 4
+Hoogspanningsmast # nl # 4
+
+Barricade # en # 4
+Barrikade # de # 4
+Barricade # nl # 4
+
+Prison # en # 4
+Gefängnis # de # 4
+Gevangenis # nl # 4 

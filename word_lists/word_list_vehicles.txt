@@ -286,34 +286,34 @@ Golf cart # en # 2
 Golfwagen # de # 2
 Golfwagen # nl # 2
 
-Icebreaker # en # 3
-Eisbrecher # de # 3
-Ijsbreker # nl # 3
+Icebreaker # en # 4
+Eisbrecher # de # 4
+Ijsbreker # nl # 4
 
-Elevator # en # 3
-Fahrstuhl # de # 3
-Lift # nl # 3
+Elevator # en # 4
+Fahrstuhl # de # 4
+Lift # nl # 4
 
-Monorail # en # 3
-Einschienbahn # de # 3
-Monorail # nl # 3
+Monorail # en # 4
+Einschienbahn # de # 4
+Monorail # nl # 4
 
-Segway # en # 3
-Segway # de # 3
-Segway # nl # 3
+Segway # en # 4
+Segway # de # 4
+Segway # nl # 4
 
-Jetpack # en # 3
-Jetpack # de # 3
-Jetpack # nl # 3
+Jetpack # en # 4
+Jetpack # de # 4
+Jetpack # nl # 4
 
-Ski lift # en # 3
-Skilift # de # 3
-Skilift # nl # 3
+Ski lift # en # 4
+Skilift # de # 4
+Skilift # nl # 4
 
-Satellite # en # 3
-Satellit # de # 3
-Satelliet # nl # 3
+Satellite # en # 4
+Satellit # de # 4
+Satelliet # nl # 4
 
-Cable car # en # 3
-Seilbahn # de # 3
-Kabelbaan # nl # 3
+Cable car # en # 4
+Seilbahn # de # 4
+Kabelbaan # nl # 4

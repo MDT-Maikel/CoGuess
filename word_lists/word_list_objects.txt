@@ -150,6 +150,10 @@ Rolling pin # en # 1
 Nudelholz # de # 1
 Deegroller # nl # 1
 
+Jigsaw Puzzle # en # 1
+Puzzle # de # 1
+Puzzel # nl # 1
+
 Bench # en # 1
 Bank # de # 1
 Bank # nl # 1
@@ -218,6 +222,18 @@ Faucet # en # 2
 Wasserhahn # de # 2
 Waterkraan # nl # 2
 
+Umbrella # en # 2
+Regenschirm # de # 2
+Paraplu # nl # 2
+
+Bathtub # en # 2
+Badewanne # de # 2
+Badkuip # nl # 2
+
+Cork # en # 2
+Kork # de # 2
+Kurk # nl # 2
+
 Kitchen stove # en # 2
 Kochherd # de # 2
 Kooktoestel # nl # 2
@@ -242,6 +258,10 @@ Toilet # en # 2
 Toilette # de # 2
 Toilet # nl # 2
 
+Boomerang # en # 2
+Bumerang # de # 2
+Boomerang # nl # 2
+
 Washing machine # en # 2
 Waschmaschine # de # 2
 Wasmachine # nl # 2
@@ -261,6 +281,10 @@ Broodrooster # nl # 2
 Cage # en # 2
 Käfig # de # 2
 Kooi # nl # 2
+
+Anvil # en # 2
+Amboss # de # 2
+Aambeeld # nl # 2
 
 Suitcase # en # 2
 Koffer # de # 2
@@ -282,6 +306,14 @@ Measuring stick # en # 2
 Messstab # de # 2
 Meetlat # nl # 2
 
+Scarecrow # en # 2
+Vogelscheuche # de # 2
+Vogelverschrikker # nl # 2
+
+Calculator # en # 2
+Taschenrechner # de # 2
+Rekenmachine # nl # 2
+
 Plate # en # 2
 Teller # de # 2
 Bord # nl # 2
@@ -289,6 +321,22 @@ Bord # nl # 2
 Shower # en # 2
 Dusche # de # 2
 Douche # nl # 2
+
+Scissors # en # 2
+Schere # de # 2
+Schaar # nl # 2
+
+Pillow # en # 2
+Kissen # de # 2
+Kussen # nl # 2
+
+Tablecloth # en # 2
+Tischdecke # de # 2
+Tafellaken # nl # 2
+
+Pacifier # en # 2
+Schnuller # de # 2
+Speen # nl # 2
 
 Wrench # en # 2
 Schraubenschlüssel # de # 2
@@ -334,62 +382,70 @@ Chainsaw # en # 2
 Kettensäge # de # 2
 Kettingzaag # nl # 2
 
-Blender # en # 3
-Mixgerät # de # 3
-Blender # nl # 3
+Blender # en # 4
+Mixgerät # de # 4
+Blender # nl # 4
 
-Fire extinguisher # en # 3
-Feuerlöschgerät # de # 3
-Brandblusser # nl # 3
+Fire extinguisher # en # 4
+Feuerlöschgerät # de # 4
+Brandblusser # nl # 4
 
-Head phones # en # 3
-Kopfhörer # de # 3
-Koptelefoon # nl # 3
+Head phones # en # 4
+Kopfhörer # de # 4
+Koptelefoon # nl # 4
 
-Drums # en # 3
-Schlagzeug # de # 3
-Drumstel # nl # 3
+Drums # en # 4
+Schlagzeug # de # 4
+Drumstel # nl # 4
 
-Watch # en # 3
-Uhr # de # 3
-Horloge # nl # 3
+Watch # en # 4
+Uhr # de # 4
+Horloge # nl # 4
 
-Screwdriver # en # 3
-Schraubendreher # de # 3
-Schroevendraaier # nl # 3
+Screwdriver # en # 4
+Schraubendreher # de # 4
+Schroevendraaier # nl # 4
 
-Laser gun # en # 3
-Laserkanone # de # 3
-Laserkanon # nl # 3
+Laser gun # en # 4
+Laserkanone # de # 4
+Laserkanon # nl # 4
 
-light bulb # en # 3
-Glühbirne # de # 3
-Gloeilamp # nl # 3
+light bulb # en # 4
+Glühbirne # de # 4
+Gloeilamp # nl # 4
 
-Blackboard # en # 3
-Tafel # de # 3
-Schoolbord # nl # 3
+Blackboard # en # 4
+Tafel # de # 4
+Schoolbord # nl # 4
 
-Stethoscope # en # 3
-Stethoskop # de # 3
-Stethoscoop # nl # 3
+Stethoscope # en # 4
+Stethoskop # de # 4
+Stethoscoop # nl # 4
 
-Thermos flask # en # 3
-Thermoskanne # de # 3
-Thermoskan # nl # 3
+Thermos flask # en # 4
+Thermoskanne # de # 4
+Thermoskan # nl # 4
 
-Monocle # en # 3
-Monokel # de # 3
-Monocle # nl # 3
+Monocle # en # 4
+Monokel # de # 4
+Monocle # nl # 4
 
-Syringe # en # 3
-Spritze # de # 3
-Spuit # nl # 3
+Syringe # en # 4
+Spritze # de # 4
+Spuit # nl # 4
 
-Binoculars # en # 3
-Fernglas # de # 3
-Verrekijker # nl # 3
+Binoculars # en # 4
+Fernglas # de # 4
+Verrekijker # nl # 4
 
-Buoy # en # 3
-Boje # de # 3
-Boei # nl # 3
+Buoy # en # 4
+Boje # de # 4
+Boei # nl # 4
+
+Balloon # en # 2
+Ballon # de # 2
+Ballon # nl # 2
+
+Backpack # en # 2
+Rücksack # de # 2
+Rugzak # nl # 2
