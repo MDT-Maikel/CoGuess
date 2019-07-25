@@ -341,11 +341,30 @@ public class MainActivity extends AppCompatActivity
 		return word;
 	}
 
+	public DBWordSet getWordSetDatabase()
+	{
+		return db_wordset;
+	}
+
+	public boolean isExistingMainEntry(String word)
+	{
+		// Use currently selected language.
+		String language = getSettingsLanguage();
+		return db_wordset.isExistingEntry(word, language);
+	}
+
 	public boolean addCustomWord(String word, String for_word_list)
 	{
 		// Use currently selected language.
 		String language = getSettingsLanguage();
 		return db_custom_wordset.insertWord(word, language, for_word_list);
+	}
+
+	public boolean isExistingCustomEntry(String word, String for_word_list)
+	{
+		// Use currently selected language.
+		String language = getSettingsLanguage();
+		return db_custom_wordset.isExistingEntry(word, language, for_word_list);
 	}
 
 	public void deleteCustomWord(String word, String for_word_list)
@@ -377,11 +396,6 @@ public class MainActivity extends AppCompatActivity
 	public ArrayList<String> getCustomWordSet(String language, String for_word_list)
 	{
 		return db_custom_wordset.getAllWords(language, for_word_list);
-	}
-
-	public DBWordSet getWordSetDatabase()
-	{
-		return db_wordset;
 	}
 
 	public boolean addCustomWordList(String word_list_name)

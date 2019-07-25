@@ -22,11 +22,14 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.SpannableString;
 import android.text.SpannedString;
+import android.text.TextWatcher;
 import android.text.method.TextKeyListener;
 import android.text.style.ForegroundColorSpan;
 import android.view.KeyEvent;
@@ -184,6 +187,13 @@ public class WordSetActivity extends AppCompatActivity
                 return true;
 
             case R.id.opt_wordset_delete_list:
+                // Can not delete list if there is no existing word list.
+                if (current_word_list == null)
+                {
+                    AppUtility.displayToastShort(getApplicationContext(), R.string.options_wordset_delete_toast_failed);
+                    return true;
+                }
+
                 // Delete list after asking for confirmation.
                 AlertDialog.Builder builder_delete_list = new AlertDialog.Builder(this);
                 builder_delete_list.setCancelable(true);
@@ -214,7 +224,10 @@ public class WordSetActivity extends AppCompatActivity
             case R.id.opt_wordset_copy:
                 // Can not copy if there is no existing word list.
                 if (current_word_list == null)
+                {
+                    AppUtility.displayToastShort(getApplicationContext(), R.string.options_wordset_copy_toast_failed);
                     return true;
+                }
 
                 // Get custom word list.
                 ArrayList<String> wordset_list = (ArrayList<String>) MainActivity.getInstance().getCustomWordSet(current_word_list);
@@ -231,7 +244,10 @@ public class WordSetActivity extends AppCompatActivity
             case R.id.opt_wordset_paste:
                 // Can not paste if there is no existing word list.
                 if (current_word_list == null)
+                {
+                    AppUtility.displayToastShort(getApplicationContext(), R.string.options_wordset_paste_toast_failed);
                     return true;
+                }
 
                 // Get word list from clipboard
                 String word_list = null;
@@ -298,8 +314,9 @@ public class WordSetActivity extends AppCompatActivity
 
     private void initEditTextField()
     {
-        // Add edit text listener to store word.
+        // Get edit text field.
         EditText edit_text = (EditText) findViewById(R.id.enter_wordset_word);
+        // Add editor action listener to store word on finishing edit text by user.
         edit_text.setOnEditorActionListener(
                 new EditText.OnEditorActionListener()
                 {
@@ -333,8 +350,11 @@ public class WordSetActivity extends AppCompatActivity
                                     return true;
                                 }
 
-                                // Show message that word has been added.
-                                AppUtility.displayToastShort(getApplicationContext(), R.string.wordset_word_added);
+                                // Show message that word has been added, but check if in any of the main databases for message.
+                                if (MainActivity.getInstance().isExistingMainEntry(word))
+                                    AppUtility.displayToastLong(getApplicationContext(), String.format(getResources().getString(R.string.wordset_word_added_exists_in_main), word));
+                                else
+                                    AppUtility.displayToastShort(getApplicationContext(), String.format(getResources().getString(R.string.wordset_word_added), word));
 
                                 // Update word list.
                                 updateListView();
@@ -342,6 +362,39 @@ public class WordSetActivity extends AppCompatActivity
                             }
                         }
                         return false;
+                    }
+                }
+        );
+        // Add an edit text watcher to check if word already exists in other databases.
+        edit_text.addTextChangedListener(
+                new TextWatcher()
+                {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) { }
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+                    @Override
+                    public void afterTextChanged(Editable s)
+                    {
+                        if (current_word_list == null)
+                            return;
+
+                        String entered_text = s.toString();
+                        if (MainActivity.getInstance().isExistingCustomEntry(entered_text, current_word_list))
+                        {
+                            // Custom entry already exists in this word list so never add and turn color to red.
+                            edit_text.setTextColor(getColor(R.color.colorAppRed));
+                        }
+                        else if (MainActivity.getInstance().isExistingMainEntry(entered_text))
+                        {
+                            // Entry already exists in one of the shipped databases so turn color to orange.
+                            edit_text.setTextColor(getColor(R.color.colorAppOrange));
+                        }
+                        else
+                        {
+                            // Change back to default text entry color.
+                            edit_text.setTextColor(Color.BLACK);
+                        }
                     }
                 }
         );

@@ -99,7 +99,8 @@
 
     <!-- Wordset Page -->
     <string name="wordset_enter_word">Enter new word ...</string>
-    <string name="wordset_word_added">New word added.</string>
+    <string name="wordset_word_added">New word %s added.</string>
+    <string name="wordset_word_added_exists_in_main">New word %s added, but also exists in the App\'s word list.</string>
     <string name="wordset_word_already_in_list">New word not added, already exists in list.</string>
     <string name="wordset_word_no_list_available">No list available, create a new list first.</string>
     <string name="wordset_no_list">Create New List!</string>
@@ -116,10 +117,13 @@
 
     <string name="options_wordset_delete_list">Delete List</string>
     <string name="options_wordset_delete_confirmation">Delete this set of custom words?</string>
+    <string name="options_wordset_delete_toast_failed">There is no word list to be deleted.</string>
 
     <string name="options_wordset_copy">Copy Words</string>
     <string name="options_wordset_copy_toast">Word list with %d words copied to clipboard.</string>
+    <string name="options_wordset_copy_toast_failed">There is no word list to copy words from.</string>
 
     <string name="options_wordset_paste">Paste Words</string>
     <string name="options_wordset_paste_toast">Word list pasted from clipboard, %d out of %d words have been added.</string>
+    <string name="options_wordset_paste_toast_failed">There is no word list for words to be pasted into.</string>
 </resources>

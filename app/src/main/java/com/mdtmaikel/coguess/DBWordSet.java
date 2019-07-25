@@ -141,6 +141,20 @@ public class DBWordSet extends SQLiteOpenHelper
         return true;
     }
 
+    public boolean isExistingEntry(String word, String language)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT EXISTS (SELECT 1 FROM " + WORDSET_TABLE_NAME + " WHERE " + WORDSET_COLUMN_WORD + " = ? AND " + WORDSET_COLUMN_LANGUAGE + " = ?)", new String[] { word, language });
+        res.moveToFirst();
+        if (res.getInt(0) == 1)
+        {
+            res.close();
+            return true;
+        }
+        res.close();
+        return false;
+    }
+
     public ArrayList<String> getAllWords(String language)
     {
         ArrayList<String> array_list = new ArrayList<String>();
