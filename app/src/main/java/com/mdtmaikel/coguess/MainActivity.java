@@ -123,7 +123,6 @@ public class MainActivity extends AppCompatActivity
 				AppUtility.displayToastShort(getApplicationContext(), String.format(getResources().getString(R.string.display_word_set_size), word_list.size()));
 			}
 
-
 			// Get duration from settings and start countdown.
 			SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
 			String duration = sharedConfig.getString("list_durations", "15");
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity
 			{
 				countdown_time_remaining = countdown_timer.getTimeRemaining();
 				countdown_timer.cancel();
-				countdown_timer = new CountDownTimerExt(Math.max(countdown_time_remaining - time_penalty * 1000, 1000), 1000);
+				countdown_timer = new CountDownTimerExt(Math.max(countdown_time_remaining - time_penalty * 1000, 100), 1000);
 				countdown_timer.start();
 			}
 		}
@@ -276,7 +275,7 @@ public class MainActivity extends AppCompatActivity
 		resetWordButton();
 	}
 
-	private void playSound(int sound)
+	public void playSound(int sound)
 	{
 		final MediaPlayer mp = MediaPlayer.create(MainActivity.getContext(), sound);
 		mp.start();
@@ -652,32 +651,22 @@ public class MainActivity extends AppCompatActivity
 		public void onTick(long millisUntilFinished)
 		{
 			time_remaining = millisUntilFinished;
-
-			int time = (int) (millisUntilFinished / 1000);
-
+			long round_up_constant = 100;
+			int time = (int) ((millisUntilFinished + round_up_constant) / 1000);
 			Button b = findViewById(R.id.button_timer);
 			b.setText(String.format("%02d:%02d", time / 60, time % 60));
-
+			// Play tick sounds for last ten seconds.
 			if (time <= 10)
 			{
 				b.setTextColor(0xffff0000);
-
-				final MediaPlayer mp = MediaPlayer.create(MainActivity.getContext(), R.raw.tick);
-				mp.start();
-				mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener()
-				{
-					public void onCompletion(MediaPlayer player)
-					{
-						player.reset();
-						player.release();
-					}
-				});
+				playSound(R.raw.tick);
 			}
 		}
 
 		@Override
 		public void onFinish()
 		{
+			playSound(R.raw.done);
 			Button b = findViewById(R.id.button_timer);
 			b.setText(R.string.timer_start);
 			b.setTextColor(0xffffffff);
