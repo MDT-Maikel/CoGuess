@@ -85,8 +85,8 @@
 
     <!-- Manual Page -->
     <string name="manual_game_cooperative">With the CoGuess application you can play a cooperative guessing game in different ways. The goal is to guess as a group as many words within a limited time. Click <u>Start!</u> for the countdown to begin, then the first player takes the phone and presses <u>Reveal!</u> to show the word. The other people must guess the word and with the green and red buttons you can keep track of the scored points. Now the next players are up until the time runs out! You can try to bring across the word in many ways, see below for some examples.</string>
-    <string name="manual_lego_title">Lego</string>
-    <string name="manual_lego">Gather as many different Lego bricks as possible and build the words out of Lego.\nRecommended categories: Nature, Objects, Structures, Vehicles.</string>
+    <string name="manual_lego_title">Lego®</string>
+    <string name="manual_lego">Gather as many different Lego® bricks as possible and build the words out of Lego®.\nRecommended categories: Nature, Objects, Structures, Vehicles.</string>
     <string name="manual_charades_title">Charades</string>
     <string name="manual_charades">Bring across the word without making any sound whatsoever.\nRecommended categories: Nature, Objects, Structures, Vehicles.</string>
     <string name="manual_drawing_title">Drawing</string>

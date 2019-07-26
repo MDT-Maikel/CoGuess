@@ -3,9 +3,12 @@
 .idea
 .DS_Store
 local.properties
+icon_coguess.png
+icon_coguess_round.png
 
 /build
 /misc
+/play_store
 
 /app/release
 /app/build
