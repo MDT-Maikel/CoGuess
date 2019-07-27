@@ -56,6 +56,8 @@ public class AboutActivity extends AppCompatActivity
         about_donation_ltc.setMovementMethod(LinkMovementMethod.getInstance());
         TextView about_donation_zec = (TextView) findViewById(R.id.about_donation_zec);
         about_donation_zec.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView about_privacy_policy = (TextView) findViewById(R.id.about_privacy_policy);
+        about_privacy_policy.setMovementMethod(LinkMovementMethod.getInstance());
 
         // Change action bar.
         final ActionBar actionBar = getSupportActionBar();

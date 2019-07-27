@@ -248,10 +248,44 @@
 
                     <Space
                         android:layout_width="match_parent"
-                        android:layout_height="8dp"
+                        android:layout_height="6dp"
                         android:layout_weight="0" />
 
                 </LinearLayout>
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_privacy_policy_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_privacy_policy_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:id="@+id/about_privacy_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/about_privacy_policy"
+                    android:textSize="18sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_weight="0" />
 
             </LinearLayout>
 

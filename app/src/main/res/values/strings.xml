@@ -65,10 +65,13 @@
 
     <!-- About Page -->
     <string name="about_description">CoGuess is a cooperative guessing game. This application provides words that need to be guessed by the players in a limited amount of time. Currently the word database contains: \n%s</string>
+
     <string name="about_license_title">License &amp; Source</string>
     <string name="about_license">This application is free as well as open source and available on <a href="https://github.com/MDT-Maikel/CoGuess">GitHub</a>. It is licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a> for code and <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a> for all other content. See the source code on GitHub for more details.</string>
+
     <string name="about_feedback_title">Bugs &amp; Issues</string>
     <string name="about_feedback">Please go to <a href="https://github.com/MDT-Maikel/CoGuess/issues">GitHub</a> for bug reports, pull requests, typographical errors, problems with the word lists, and issues with the application on different Android versions or devices.</string>
+
     <string name="about_donation_title">Support</string>
     <string name="about_donation">This application will remain free, open source and free of advertisement, in case you feel this is worthy of a donation you can transfer <a href="https://bitcoin.org/en/">Bitcoin</a>, <a href="https://litecoin.org/">Litecoin</a> or <a href="https://z.cash/">Zcash</a> to one of the following addresses:</string>
     <string name="about_donation_btc_old"><a href="https://chain.so/address/BTC/3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF">3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF</a></string>
@@ -81,6 +84,9 @@
     <string name="about_donation_copied_address_btc">Copied Bitcoin address to clipboard.</string>
     <string name="about_donation_copied_address_ltc">Copied Litecoin address to clipboard.</string>
     <string name="about_donation_copied_address_zec">Copied ZCash address to clipboard.</string>
+
+    <string name="about_privacy_policy_title">Privacy Policy</string>
+    <string name="about_privacy_policy">This is a short overview of the policy, for more details consult the <a href="https://github.com/MDT-Maikel/CoGuess/blob/master/PRIVACY_POLICY.md">GitHub source</a>. This application is open source and does not gather any personal data or any data provided by the user. Nonetheless data may be gathered by third parties providing services to run this application. Please consult Google Play Services <a href="https://policies.google.com/privacy">privacy policy</a> for more details. This application provides no warranty for the services it provides.</string>
 
 
     <!-- Manual Page -->
