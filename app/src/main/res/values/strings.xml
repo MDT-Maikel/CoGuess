@@ -1,3 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY donation_btc_address "3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF">
+    <!ENTITY donation_ltc_address "M9P84rgACh6eCfAGwxvN6K3vu2yQSu8kdG">
+    <!ENTITY donation_zec_address "t1eHJCchE6SQSyXEdyogrSMAsR3hF6KDexw">
+    ]>
+
+
 <resources>
     <!-- Main -->
     <string name="app_name">CoGuess</string>
@@ -6,7 +14,7 @@
     <string name="title_activity_manual">Game Manual</string>
     <string name="title_activity_scores">Scores</string>
     <string name="title_activity_wordset">Custom Words</string>
-    <string name="no_word_set_selected">Select a word set before starting the game!</string>
+    <string name="no_word_set_selected">Select at least one word set before starting the game!</string>
     <string name="display_word_set_size">Starting the game with %d words.</string>
     <string name="display_achieved_score">Your team scored %d points! Check the scores tab to see how you performed.</string>
 
@@ -74,13 +82,12 @@
 
     <string name="about_donation_title">Support</string>
     <string name="about_donation">This application will remain free, open source and free of advertisement, in case you feel this is worthy of a donation you can transfer <a href="https://bitcoin.org/en/">Bitcoin</a>, <a href="https://litecoin.org/">Litecoin</a> or <a href="https://z.cash/">Zcash</a> to one of the following addresses:</string>
-    <string name="about_donation_btc_old"><a href="https://chain.so/address/BTC/3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF">3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF</a></string>
-    <string name="about_donation_btc"><a href="https://chain.so/address/BTC/3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF">3Bcv3n2ED3WQ ...</a></string>
-    <string name="about_donation_ltc"><a href="https://chain.so/address/LTC/M9P84rgACh6eCfAGwxvN6K3vu2yQSu8kdG">M9P84rgACh6e ...</a></string>
-    <string name="about_donation_zec"><a href="https://chain.so/address/ZEC/t1eHJCchE6SQSyXEdyogrSMAsR3hF6KDexw">t1eHJCchE6SQ ...</a></string>
-    <string name="about_donation_btc_address">3Bcv3n2ED3WQvH1fD3gw6ogAu2gHhfAgJF</string>
-    <string name="about_donation_ltc_address">M9P84rgACh6eCfAGwxvN6K3vu2yQSu8kdG</string>
-    <string name="about_donation_zec_address">t1eHJCchE6SQSyXEdyogrSMAsR3hF6KDexw</string>
+    <string name="about_donation_btc"><a href="https://chain.so/address/BTC/&donation_btc_address;">&donation_btc_address;</a></string>
+    <string name="about_donation_ltc"><a href="https://chain.so/address/LTC/&donation_ltc_address;">&donation_ltc_address;</a></string>
+    <string name="about_donation_zec"><a href="https://chain.so/address/ZEC/&donation_zec_address;">&donation_zec_address;</a></string>
+    <string name="about_donation_btc_address">&donation_btc_address;</string>
+    <string name="about_donation_ltc_address">&donation_ltc_address;</string>
+    <string name="about_donation_zec_address">&donation_zec_address;</string>
     <string name="about_donation_copied_address_btc">Copied Bitcoin address to clipboard.</string>
     <string name="about_donation_copied_address_ltc">Copied Litecoin address to clipboard.</string>
     <string name="about_donation_copied_address_zec">Copied ZCash address to clipboard.</string>

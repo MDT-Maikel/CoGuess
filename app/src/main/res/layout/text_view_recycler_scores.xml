@@ -16,7 +16,7 @@
         <TextView
             android:id="@+id/score_position"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:layout_weight="0.45"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
@@ -27,19 +27,20 @@
         <TextView
             android:id="@+id/score_team_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:layout_weight="0.275"
             android:fontFamily="sans-serif-light"
             android:gravity="center_vertical"
             android:textAlignment="textStart"
             android:textSize="24sp"
+            android:autoSizeTextType="uniform"
             android:textStyle="bold"
             android:paddingLeft="8dp" />
 
         <TextView
             android:id="@+id/score_points"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:layout_weight="0.275"
             android:fontFamily="sans-serif-light"
             android:gravity="center_vertical"

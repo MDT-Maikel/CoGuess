@@ -152,11 +152,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="32dp"
                             android:layout_marginStart="8dp"
+                            android:layout_marginEnd="4dp"
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
                             android:text="@string/about_donation_btc"
                             android:textSize="18sp"
+                            android:autoSizeTextType="uniform"
                             android:layout_weight="1" />
 
                         <ImageButton
@@ -189,12 +192,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="32dp"
                             android:layout_marginStart="8dp"
+                            android:layout_marginEnd="4dp"
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:fontFamily="sans-serif-light"
                             android:gravity="center_vertical"
                             android:text="@string/about_donation_ltc"
                             android:textSize="18sp"
+                            android:autoSizeTextType="uniform"
                             android:layout_weight="1"/>
 
                         <ImageButton
@@ -227,12 +232,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="32dp"
                             android:layout_marginStart="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:ellipsize="end"
+                            android:layout_marginEnd="4dp"
                             android:maxLines="1"
                             android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
                             android:text="@string/about_donation_zec"
                             android:textSize="18sp"
+                            android:autoSizeTextType="uniform"
                             android:layout_weight="1"/>
 
                         <ImageButton
