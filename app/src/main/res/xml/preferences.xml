@@ -7,7 +7,8 @@
         android:defaultValue="en"
         android:key="list_languages"
         android:summary="@string/pref_language_description"
-        android:title="@string/pref_language" />
+        android:title="@string/pref_language"
+        android:icon="@drawable/ic_pref_language" />
     <!--
     <MultiSelectListPreference
         android:dialogTitle="@string/pref_word_difficulties_dialog"
@@ -25,7 +26,8 @@
         android:defaultValue="@array/pref_word_categories_defaults"
         android:key="list_word_categories"
         android:summary="@string/pref_word_categories_description"
-        android:title="@string/pref_word_categories" />
+        android:title="@string/pref_word_categories"
+        android:icon="@drawable/ic_pref_wordlist" />
     <ListPreference
         android:dialogTitle="@string/pref_duration_dialog"
         android:entries="@array/pref_durations"
@@ -33,7 +35,8 @@
         android:defaultValue="15"
         android:key="list_durations"
         android:summary="@string/pref_duration_description"
-        android:title="@string/pref_duration" />
+        android:title="@string/pref_duration"
+        android:icon="@drawable/ic_pref_timer" />
     <ListPreference
         android:dialogTitle="@string/pref_penalty_dialog"
         android:entries="@array/pref_penalties"
@@ -41,7 +44,8 @@
         android:defaultValue="0"
         android:key="list_penalties"
         android:summary="@string/pref_penalty_description"
-        android:title="@string/pref_penalty" />
+        android:title="@string/pref_penalty"
+        android:icon="@drawable/ic_pref_penalty" />
     <EditTextPreference
         android:key="text_team_name"
         android:defaultValue="@string/string_pref_team_name_default"
@@ -49,5 +53,6 @@
         android:title="@string/string_pref_team_name"
         android:inputType="text"
         android:singleLine="true"
-        android:maxLines="1" />
+        android:maxLines="1"
+        android:icon="@drawable/ic_pref_teamname" />
 </PreferenceScreen>
