@@ -317,3 +317,15 @@ Satelliet # nl # 4
 Cable car # en # 4
 Seilbahn # de # 4
 Kabelbaan # nl # 4
+
+Plow # en # 4
+Pflug # de # 4
+Ploeg # nl # 4
+
+Gondola # en # 4
+Gondel # de # 4
+Gondel # nl # 4
+
+Bobsled # en # 4
+Bob # de # 4
+Bobslee # nl # 4

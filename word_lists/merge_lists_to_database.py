@@ -31,11 +31,13 @@ def convert_line_to_word_properties(line):
 
 # checks the file for wrong contents
 def check_word_list_file(lines):
+	line_nr = 0
 	for line in lines:
+		line_nr = line_nr + 1		
 		regex_match = '[^a-zA-Z#\n 124äëïöüÄËÏÖÜß\-()]+'
 		if re.search(regex_match, line, re.UNICODE):
-			return False
-	return True
+			return [re.search(regex_match, line, re.UNICODE), line_nr]
+	return None
 
 
 # read from database text files and associate with categoties
@@ -50,8 +52,10 @@ database_files = [
 for file in database_files:
 	with open(file[0], 'r') as f:
 		lines = f.readlines()
-		if not check_word_list_file(lines):
-			print('WARNING: wrong contents in ' + file[0] + ', ignoring this file')
+		error = check_word_list_file(lines)
+		if error:
+			print(error[0])
+			print('WARNING: illegal character(s) \'' + error[0].group(0) + '\' at line ' + str(error[1]) + ' in ' + file[0] + ', ignoring this file')
 			continue
 		word_category = file[1]
 		# extract word and properties from the read line.
@@ -59,6 +63,18 @@ for file in database_files:
 		add_words = [word + [word_category] for word in add_words if word != None]
 		# add to words list.
 		words += add_words
+
+
+# check for duplicate words
+languages = [word[1] for word in words]
+languages = set(languages)
+for lan in languages:
+	words_lan = [word[0] for word in words if word[1] == lan]
+	s = set()
+	duplicates = set(x for x in words_lan if x in s or s.add(x))
+	if duplicates:
+		print("WARNING: found duplicate words: ", duplicates)
+	print("read " + str(len(words_lan)) + " words for lan = " + lan + " ...")
 
 
 # create merged database

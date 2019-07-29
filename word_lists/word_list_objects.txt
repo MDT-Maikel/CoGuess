@@ -156,7 +156,7 @@ Puzzel # nl # 1
 
 Bench # en # 1
 Bank # de # 1
-Bank # nl # 1
+Tuinbank # nl # 1
 
 Christmas tree # en # 1
 Weihnachtsbaum # de # 1
@@ -382,6 +382,14 @@ Chainsaw # en # 2
 Kettensäge # de # 2
 Kettingzaag # nl # 2
 
+Balloon # en # 2
+Ballon # de # 2
+Ballon # nl # 2
+
+Backpack # en # 2
+Rücksack # de # 2
+Rugzak # nl # 2
+
 Blender # en # 4
 Mixgerät # de # 4
 Blender # nl # 4
@@ -442,10 +450,30 @@ Buoy # en # 4
 Boje # de # 4
 Boei # nl # 4
 
-Balloon # en # 2
-Ballon # de # 2
-Ballon # nl # 2
+Mirror # en # 4
+Spiegel # de # 4
+Spiegel # nl # 4
 
-Backpack # en # 2
-Rücksack # de # 2
-Rugzak # nl # 2
+Stretcher # en # 4
+Krankentrage # de # 4
+Brancard # nl # 4
+
+Lighter # en # 4
+Feuerzeug # de # 4
+Aansteker # nl # 4
+
+Xylophone # en # 4
+Xylophon # de # 4
+Xylofoon # nl # 4
+
+Thermometer # en # 4
+Thermometer # de # 4
+Thermometer # nl # 4
+
+CD # en # 4
+CD # de # 4
+CD # nl # 4
+
+Yo-yo # en # 4
+Jo-Jo # de # 4
+Jojo # nl # 4

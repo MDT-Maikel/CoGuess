@@ -178,6 +178,34 @@ Banana # en # 1
 Banane # de # 1
 Banaan # nl # 1
 
+Arm # en # 1
+Arm # de # 1
+Arm # nl # 1
+
+Leg # en # 1
+Bein # de # 1
+Been # nl # 1
+
+Hand # en # 1
+Hand # de # 1
+Hand # nl # 1
+
+Foot # en # 1
+Fuß # de # 1
+Voet # nl # 1
+
+Finger # en # 1
+Finger # de # 1
+Vinger # nl # 1
+
+Toe # en # 1
+Zeh # de # 1
+Teen # nl # 1
+
+Head # en # 1
+Kopf # de # 1
+Hoofd # nl # 1
+
 Cherries # en # 2
 Kirschen # de # 2
 Kersen # nl # 2
@@ -286,6 +314,10 @@ Palm tree # en # 2
 Palme # de # 2
 Palm # nl # 2
 
+Donkey # en # 2
+Esel # de # 2
+Ezel # nl # 2
+
 Starfish # en # 2
 Seestern # de # 2
 Zeestern # nl # 2
@@ -326,6 +358,10 @@ Tiger # en # 4
 Tiger # de # 4
 Tijger # nl # 4
 
+Tsunami # en # 4
+Tsunami # de # 4
+Tsunami # nl # 4
+
 Squirrel # en # 4
 Eichhörnchen # de # 4
 Eekhoorntje # nl # 4
@@ -333,6 +369,18 @@ Eekhoorntje # nl # 4
 Log # en # 4
 Holzklotz # de # 4
 Boomstam # nl # 4
+
+Honeycomb # en # 4
+Honigwabe # de # 4
+Honingraat # nl # 4
+
+Forest # en # 4
+Wald # de # 4
+Bos # nl # 4
+
+Jungle # en # 4
+Dschungel # de # 4
+Jungle # nl # 4
 
 Bear # en # 4
 Bär # de # 4
@@ -354,6 +402,10 @@ Swordfish # en # 4
 Schwertfisch # de # 4
 Zwaardvis # nl # 4
 
+Earthquake # en # 4
+Erdbeben # de # 4
+Aardbeving # nl # 4
+
 Catterpillar # en # 4
 Raupe # de # 4
 Rups # nl # 4
@@ -366,42 +418,42 @@ Lightning # en # 4
 Blitz # de # 4
 Bliksem # nl # 4
 
+Footprint # en # 4
+Fußabdruck # de # 4
+Voetafdruk # nl # 4
+
+Mudflat # en # 4
+Watt # de # 4
+Wad # nl # 4
+
 Lizard # en # 4
 Eidechse # de # 4
 Hagedis # nl # 4
+
+Tentacle # en # 4
+Tentakel # de # 4
+Tentakel # nl # 4
 
 Owl # en # 4
 Eule # de # 4
 Uil # nl # 4
 
+Centipede # en # 4
+Tausendfüßer # de # 4
+Duizendpoot # nl # 4
+
+Fossil # en # 4
+Fossil # de # 4
+Fossiel # nl # 4
+
 Lettuce # en # 4
 Salat # de # 4
 Slakrop # nl # 4
 
-Arm # en # 1
-Arm # de # 1
-Arm # nl # 1
+Quicksand # en # 4
+Treibsand # de # 4
+Drijfzand # nl # 4
 
-Leg # en # 1
-Bein # de # 1
-Been # nl # 1
-
-Hand # en # 1
-Hand # de # 1
-Hand # nl # 1
-
-Foot # en # 1
-Fuß # de # 1
-Voet # nl # 1
-
-Finger # en # 1
-Finger # de # 1
-Vinger # nl # 1
-
-Toe # en # 1
-Zeh # de # 1
-Teen # nl # 1
-
-Head # en # 1
-Kopf # de # 1
-Hoofd # nl # 1
+Ghost # en # 4
+Gespenst # de # 4
+Spook # nl # 4

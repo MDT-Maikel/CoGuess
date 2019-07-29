@@ -282,7 +282,7 @@ public class WordSetActivity extends AppCompatActivity
 
                 // Create the selection dialog.
                 AlertDialog.Builder builder_select_lists = new AlertDialog.Builder(this);
-                builder_select_lists.setTitle(R.string.options_wordset_select_lists);
+                builder_select_lists.setTitle(R.string.options_wordset_select_lists_dialog);
                 builder_select_lists.setMultiChoiceItems(list_names, list_selected, new
                         DialogInterface.OnMultiChoiceClickListener()
                         {

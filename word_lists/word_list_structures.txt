@@ -282,6 +282,10 @@ Cinema # en # 2
 Kino # de # 2
 Bioscooop # nl # 2
 
+Bathroom # en # 2
+Badezimmer # de # 2
+Badkamer # nl # 2
+
 Legoland # en # 4
 Legoland # de # 4
 Legoland # nl # 4
@@ -302,6 +306,18 @@ Barricade # en # 4
 Barrikade # de # 4
 Barricade # nl # 4
 
-Prison # en # 4
-Gefängnis # de # 4
-Gevangenis # nl # 4 
+Discotheque # en # 4
+Diskothek # de # 4
+Discotheek # nl # 4
+
+Post office # en # 4
+Postamt # de # 4
+Postkantoor # nl # 4
+
+Observatory # en # 4
+Observatorium # de # 4
+Observatorium # nl # 4
+
+House boat # en # 4
+Wohnboot # de # 4
+Woonboot # nl # 4

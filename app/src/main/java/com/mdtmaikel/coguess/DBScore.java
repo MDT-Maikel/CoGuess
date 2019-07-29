@@ -108,7 +108,7 @@ public class DBScore extends SQLiteOpenHelper
         {
             String name = cursor.getString(cursor.getColumnIndex(SCORE_COLUMN_NAME));
             String score = cursor.getString(cursor.getColumnIndex(SCORE_COLUMN_SCORE));
-            Hashtable score_table = new Hashtable();
+            Hashtable<String, String> score_table = new Hashtable<String, String>();
             score_table.put("team_name", name);
             score_table.put("score", score);
             array_list.add(score_table);

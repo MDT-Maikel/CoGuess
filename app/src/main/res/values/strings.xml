@@ -142,6 +142,7 @@
     <string name="options_wordset_paste_toast_failed">There is no word list for words to be pasted into.</string>
 
     <string name="options_wordset_select_lists">Select Lists</string>
+    <string name="options_wordset_select_lists_dialog">Select lists:</string>
     <string name="options_wordset_select_lists_toast_failed">There are no word lists to be selected.</string>
 
 </resources>

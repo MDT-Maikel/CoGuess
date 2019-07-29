@@ -323,7 +323,7 @@ public class MainActivity extends AppCompatActivity
 		word_list.addAll(db_custom_wordset.getAllActivatedWords(language));
 
 		// Delete duplicate word list entries, maintaining the order is irrelevant.
-		Set word_list_set = new LinkedHashSet(word_list);
+		Set<String> word_list_set = new LinkedHashSet<String>(word_list);
 		word_list.clear();
 		word_list.addAll(word_list_set);
 
