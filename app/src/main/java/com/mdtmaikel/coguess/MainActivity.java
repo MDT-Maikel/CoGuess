@@ -448,7 +448,7 @@ public class MainActivity extends AppCompatActivity
 	public String getSettingsTeamName()
 	{
 		SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
-		return sharedConfig.getString("text_team_name", getString(R.string.string_pref_team_name_default));
+		return sharedConfig.getString("text_team_name", getString(R.string.pref_team_name_default));
 	}
 
 
@@ -595,7 +595,7 @@ public class MainActivity extends AppCompatActivity
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.options_main, menu);
 		// Fix the text color.
-		for(int i = 0; i < menu.size(); i++) {
+		for (int i = 0; i < menu.size(); i++) {
 			MenuItem item = menu.getItem(i);
 			SpannableString span_string = new SpannableString(menu.getItem(i).getTitle().toString());
 			span_string.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.colorAppText)),0, span_string.length(),0);

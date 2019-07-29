@@ -60,9 +60,10 @@
     <string name="pref_penalty_dialog">Select time penalty:</string>
     <string name="pref_penalty_description">Choose a time penalty for each non-guessed word</string>
 
-    <string name="string_pref_team_name">Team Name</string>
-    <string name="string_pref_team_name_description">Enter a team name (for scores)</string>
-    <string name="string_pref_team_name_default">CoGuess</string>
+    <string name="pref_team_name">Team Name</string>
+    <string name="pref_team_name_dialog">Team name:</string>
+    <string name="pref_team_name_description">Enter a team name (for scores)</string>
+    <string name="pref_team_name_default">CoGuess</string>
 
 
     <!-- Score Page -->
@@ -139,4 +140,8 @@
     <string name="options_wordset_paste">Paste Words</string>
     <string name="options_wordset_paste_toast">Word list pasted from clipboard, %d out of %d words have been added.</string>
     <string name="options_wordset_paste_toast_failed">There is no word list for words to be pasted into.</string>
+
+    <string name="options_wordset_select_lists">Select Lists</string>
+    <string name="options_wordset_select_lists_toast_failed">There are no word lists to be selected.</string>
+
 </resources>

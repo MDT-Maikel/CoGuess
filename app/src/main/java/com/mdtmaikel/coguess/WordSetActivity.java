@@ -42,6 +42,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
@@ -82,11 +83,9 @@ public class WordSetActivity extends AppCompatActivity
 
         // Retrieve current word list.
         ArrayList<String> word_lists = MainActivity.getInstance().getAllWordLists();
+        current_word_list = null;
         if (!word_lists.isEmpty())
-        {
-            Collections.sort(word_lists, String.CASE_INSENSITIVE_ORDER);
             current_word_list = word_lists.get(0);
-        }
         SetCurrentWordListTitle();
 
         // Init edit text field.
@@ -261,6 +260,62 @@ public class WordSetActivity extends AppCompatActivity
                 // Show message that list has been pasted from clipboard.
                 AppUtility.displayToastLong(getApplicationContext(), String.format(getResources().getString(R.string.options_wordset_paste_toast), result[0], result[1]));
                 return true;
+
+            case R.id.opt_wordset_select_lists:
+                // Can not select lists if there are none.
+                if (current_word_list == null)
+                {
+                    AppUtility.displayToastShort(getApplicationContext(), R.string.options_wordset_select_lists_toast_failed);
+                    return true;
+                }
+
+                // Determine which lists the user has created and currently are selected.
+                ArrayList<String> word_lists = MainActivity.getInstance().getAllWordLists();
+                String list_names[] = new String[word_lists.size()];
+                boolean list_selected[] = new boolean[word_lists.size()];
+                ArrayList<Integer> selected_items = new ArrayList<Integer>();
+                for (int i = 0; i < word_lists.size() ; i++)
+                {
+                    list_names[i] = word_lists.get(i);
+                    list_selected[i] = MainActivity.getInstance().getWordListActive(word_lists.get(i));
+                }
+
+                // Create the selection dialog.
+                AlertDialog.Builder builder_select_lists = new AlertDialog.Builder(this);
+                builder_select_lists.setTitle(R.string.options_wordset_select_lists);
+                builder_select_lists.setMultiChoiceItems(list_names, list_selected, new
+                        DialogInterface.OnMultiChoiceClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which, boolean is_checked)
+                            {
+                                list_selected[which] = is_checked;
+                            }
+                        });
+                builder_select_lists.setPositiveButton(R.string.delete_confirm, new
+                        DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id)
+                            {
+                                // Update active lists according to user selection.
+                                for (int i = 0; i < list_names.length ; i++)
+                                    MainActivity.getInstance().setWordListActive(list_names[i], list_selected[i]);
+                                // Update checkbox.
+                                updateWordListCheckbox();
+                            }
+                        });
+                builder_select_lists.setNegativeButton(R.string.delete_cancel, new
+                        DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id)
+                            {
+                                // No need to do anything.
+                            }
+                    });
+
+                builder_select_lists.show();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -271,7 +326,7 @@ public class WordSetActivity extends AppCompatActivity
         Collections.reverse(wordset_list);
         // Construct word set string.
         String wordset_string = "";
-        for(String word : wordset_list)
+        for (String word : wordset_list)
         {
             wordset_string = wordset_string + word + "\n";
         }
@@ -468,19 +523,17 @@ public class WordSetActivity extends AppCompatActivity
         // Select another word list.
         ArrayList<String> word_lists = MainActivity.getInstance().getAllWordLists();
         if (!word_lists.isEmpty())
-        {
-            Collections.sort(word_lists, String.CASE_INSENSITIVE_ORDER);
             current_word_list = word_lists.get(0);
-        }
         else
-        {
             current_word_list = null;
-        }
         // Update title and word list.
         SetCurrentWordListTitle();
         updateListView();
         updateWordListCheckbox();
     }
+
+
+    /*-- Word List Checkbox -- */
 
     public void initWordListCheckbox()
     {

@@ -47,10 +47,11 @@
         android:title="@string/pref_penalty"
         android:icon="@drawable/ic_pref_penalty" />
     <EditTextPreference
+        android:dialogTitle="@string/pref_team_name_dialog"
         android:key="text_team_name"
-        android:defaultValue="@string/string_pref_team_name_default"
-        android:summary="@string/string_pref_team_name_description"
-        android:title="@string/string_pref_team_name"
+        android:defaultValue="@string/pref_team_name_default"
+        android:summary="@string/pref_team_name_description"
+        android:title="@string/pref_team_name"
         android:inputType="text"
         android:singleLine="true"
         android:maxLines="1"

@@ -25,6 +25,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class DBCustomWordSet extends SQLiteOpenHelper
@@ -172,6 +173,8 @@ public class DBCustomWordSet extends SQLiteOpenHelper
             array_list.add(word_list);
             cursor.moveToNext();
         }
+        // Sort word list alphabetically.
+        Collections.sort(array_list, String.CASE_INSENSITIVE_ORDER);
         db.close();
         cursor.close();
         return array_list;
