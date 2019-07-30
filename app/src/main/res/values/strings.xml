@@ -17,6 +17,7 @@
     <string name="no_word_set_selected">Select at least one word set before starting the game!</string>
     <string name="display_word_set_size">Starting the game with %d words.</string>
     <string name="display_achieved_score">Your team scored %d points! Check the scores tab to see how you performed.</string>
+    <string name="text_to_speech_unavailable">Text to speech unavailable for language %s.</string>
 
 
     <!-- Buttons & Texts -->

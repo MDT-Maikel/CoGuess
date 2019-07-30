@@ -30,8 +30,10 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.speech.tts.TextToSpeech;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -48,12 +50,14 @@ import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.Locale;
 import java.util.Set;
 
 
 public class MainActivity extends AppCompatActivity
 {
-	/* Class Variables */
+	/*-- Class Variables --*/
+
 	private int score;
 	private int word_counter;
 	private ArrayList<String> word_list = new ArrayList<String>();
@@ -70,8 +74,10 @@ public class MainActivity extends AppCompatActivity
 	private DBCustomWordSet db_custom_wordset;
 	private DBScore db_score;
 
+	private TextToSpeech text_speech;
 
-	/* Class Methods */
+
+	/*-- Class Methods --*/
 
 	private static MainActivity instance;
 
@@ -86,7 +92,7 @@ public class MainActivity extends AppCompatActivity
 	}
 
 
-	/* Button Click Events */
+	/*-- Button Click Events --*/
 
 	public void buttonOnWordClick(View v)
 	{
@@ -290,7 +296,7 @@ public class MainActivity extends AppCompatActivity
 	}
 
 
-	/* Word Methods */
+	/*-- Word Methods --*/
 
 	private void initWordList()
 	{
@@ -421,7 +427,7 @@ public class MainActivity extends AppCompatActivity
 	}
 
 
-	/* Settings */
+	/*-- Application Settings --*/
 
 	// Returns the game language.
 	public String getSettingsLanguage()
@@ -452,7 +458,7 @@ public class MainActivity extends AppCompatActivity
 	}
 
 
-	/* Score Keeping */
+	/*-- Score Keeping --*/
 
 	private void updateScore()
 	{
@@ -484,7 +490,7 @@ public class MainActivity extends AppCompatActivity
 	}
 
 
-	/* Highlighting */
+	/*-- Highlighting --*/
 
 	private void handleButtonHighlighting()
 	{
@@ -503,7 +509,65 @@ public class MainActivity extends AppCompatActivity
 	}
 
 
-	/* Event Handling */
+	/*-- Text To Speech --*/
+
+	private void initTextToSpeech()
+	{
+		if (text_speech == null)
+		{
+			text_speech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener()
+			{
+				@Override
+				public void onInit(int status)
+				{
+					if (status == TextToSpeech.SUCCESS)
+					{
+						// Set language according to words.
+						String language = getSettingsLanguage();
+						if (language.equals("en") && text_speech.isLanguageAvailable(Locale.US) == TextToSpeech.LANG_AVAILABLE)
+						{
+								text_speech.setLanguage(Locale.US);
+						}
+						else if (language.equals("de") && text_speech.isLanguageAvailable(Locale.GERMAN) == TextToSpeech.LANG_AVAILABLE)
+						{
+							text_speech.setLanguage(Locale.GERMAN);
+						}
+						else if (language.equals("nl") && text_speech.isLanguageAvailable(new Locale("NL")) == TextToSpeech.LANG_AVAILABLE)
+						{
+							text_speech.setLanguage(new Locale("NL"));
+						}
+						else
+						{
+							// Message about language unavailable.
+							AppUtility.displayToastShort(getApplicationContext(), String.format(getResources().getString(R.string.text_to_speech_unavailable), language));
+						}
+					}
+					else
+					{
+						Log.w("TEXT_TO_SPEECH", String.format("init failed: %d", status));
+					}
+				}
+			});
+		}
+	}
+
+	private void deleteTextToSpeech()
+	{
+		if (text_speech != null)
+		{
+			text_speech.stop();
+			text_speech.shutdown();
+			text_speech = null;
+		}
+	}
+
+	private void wordToSpeech(String word)
+	{
+		text_speech.speak(word, TextToSpeech.QUEUE_FLUSH, null);
+	}
+
+
+	/*-- Event Handling --*/
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -554,6 +618,10 @@ public class MainActivity extends AppCompatActivity
 
 		// Init preferences.
 		PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+
+		// Init text to speech.
+		initTextToSpeech();
+
 	}
 
 	@Override
@@ -567,22 +635,34 @@ public class MainActivity extends AppCompatActivity
 			countdown_timer.cancel();
 			countdown_timer = null;
 		}
-
+		// Shut down text to speech.
+		deleteTextToSpeech();
 	}
 
 	@Override
 	protected void onResume()
 	{
 		super.onResume();
-
-		System.out.println(game_state);
-		System.out.println(countdown_timer);
+		// Restart countdown timer.
 		if (countdown_timer == null && game_state == "running")
 		{
 			countdown_timer = new CountDownTimerExt(countdown_time_remaining, 1000);
 			countdown_timer.start();
 		}
+		// Restart text to speech.
+		initTextToSpeech();
 	}
+
+	@Override
+	protected void onDestroy()
+	{
+		super.onDestroy();
+		// Shut down text to speech.
+		deleteTextToSpeech();
+	}
+
+
+	/*-- Options Menu --*/
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -635,7 +715,7 @@ public class MainActivity extends AppCompatActivity
 	}
 
 
-	/* Class: Countdown Timer */
+	/*-- Class: Countdown Timer --*/
 
 	public class CountDownTimerExt extends CountDownTimer
 	{
