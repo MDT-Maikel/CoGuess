@@ -42,7 +42,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
@@ -51,6 +50,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -339,6 +340,9 @@ public class WordSetActivity extends AppCompatActivity
         String[] words = word_list.split("\n");
         ArrayList<String> wordset_list = new ArrayList<String>(Arrays.asList(words));
         Collections.reverse(wordset_list);
+        // Delete words that are just whitespace or empty strings.
+        wordset_list.removeIf(StringUtils::isBlank);
+        // Add words and keep track of amount added.
         int[] result = new int[] {0, wordset_list.size()};
         for (String word : wordset_list)
         {
