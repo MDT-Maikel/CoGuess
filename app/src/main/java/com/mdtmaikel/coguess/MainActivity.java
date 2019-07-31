@@ -21,6 +21,7 @@ package com.mdtmaikel.coguess;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.preference.PreferenceManager;
 
 import android.content.SharedPreferences;
@@ -39,6 +40,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -203,6 +205,11 @@ public class MainActivity extends AppCompatActivity
 		openURL("https://www.google." + language + "/search?tbm=isch&q=" + current_word);
 	}
 
+	public void buttonOnSpeechClick(View v)
+	{
+		wordToSpeech(current_word);
+	}
+
 	private void openURL(String url)
 	{
 		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
@@ -253,24 +260,20 @@ public class MainActivity extends AppCompatActivity
 
 	private void setPrimaryButtonViewState(int state)
 	{
-		Button bw = findViewById(R.id.button_word);
-		bw.setVisibility(state);
-		TextView ts = findViewById(R.id.text_score);
-		ts.setVisibility(state);
+		ConstraintLayout layout_word = findViewById(R.id.layout_word);
+		layout_word.setVisibility(state);
+		TextView text_score = findViewById(R.id.text_score);
+		text_score.setVisibility(state);
 	}
 
 	private void setSecondaryButtonViewState(int state)
 	{
-		ImageButton bc = findViewById(R.id.image_button_correct);
-		bc.setVisibility(state);
-		ImageButton bw = findViewById(R.id.image_button_wrong);
-		bw.setVisibility(state);
-		ImageButton bd = findViewById(R.id.image_button_dict);
-		bd.setVisibility(state);
-		ImageButton bk = findViewById(R.id.image_button_wiki);
-		bk.setVisibility(state);
-		ImageButton bg = findViewById(R.id.image_button_img);
-		bg.setVisibility(state);
+		ImageButton button_correct = findViewById(R.id.image_button_correct);
+		button_correct.setVisibility(state);
+		ImageButton button_wrong = findViewById(R.id.image_button_wrong);
+		button_wrong.setVisibility(state);
+		LinearLayout layout_buttons = findViewById(R.id.layout_word_buttons);
+		layout_buttons.setVisibility(state);
 	}
 
 	public void resetGameState()
@@ -500,6 +503,8 @@ public class MainActivity extends AppCompatActivity
 		button_wiki.setOnTouchListener(new ButtonHighlighter(button_wiki));
 		ImageButton button_img = (ImageButton) findViewById(R.id.image_button_img);
 		button_img.setOnTouchListener(new ButtonHighlighter(button_img));
+		ImageButton button_speech = (ImageButton) findViewById(R.id.image_button_speech);
+		button_speech.setOnTouchListener(new ButtonHighlighter(button_speech));
 
 		ImageButton button_wrong = (ImageButton) findViewById(R.id.image_button_wrong);
 		button_wrong.setOnTouchListener(new ButtonHighlighter(button_wrong));

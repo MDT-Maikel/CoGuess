@@ -24,7 +24,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -145,6 +145,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             app:srcCompat="@drawable/ic_crypto_icon_btc"
+                            android:contentDescription="@null"
                             android:layout_weight="0" />
 
                         <TextView
@@ -169,7 +170,8 @@
                             android:layout_weight="0"
                             android:background="?selectableItemBackgroundBorderless"
                             android:onClick="buttonOnCopyBitcoinClick"
-                            app:srcCompat="@drawable/ic_copy" />
+                            app:srcCompat="@drawable/ic_copy"
+                            android:contentDescription="@null" />
 
                     </LinearLayout>
 
@@ -185,6 +187,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             app:srcCompat="@drawable/ic_crypto_icon_ltc"
+                            android:contentDescription="@null"
                             android:layout_weight="0"/>
 
                         <TextView
@@ -209,7 +212,8 @@
                             android:layout_weight="0"
                             android:background="?selectableItemBackgroundBorderless"
                             android:onClick="buttonOnCopyLitecoinClick"
-                            app:srcCompat="@drawable/ic_copy"/>
+                            app:srcCompat="@drawable/ic_copy"
+                            android:contentDescription="@null" />
 
                     </LinearLayout>
 
@@ -225,6 +229,7 @@
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             app:srcCompat="@drawable/ic_crypto_icon_zec"
+                            android:contentDescription="@null"
                             android:layout_weight="0"/>
 
                         <TextView
@@ -248,14 +253,14 @@
                             android:layout_weight="0"
                             android:background="?selectableItemBackgroundBorderless"
                             android:onClick="buttonOnCopyZCashClick"
-                            app:srcCompat="@drawable/ic_copy"/>
+                            app:srcCompat="@drawable/ic_copy"
+                            android:contentDescription="@null" />
 
                     </LinearLayout>
 
                     <Space
                         android:layout_width="match_parent"
-                        android:layout_height="6dp"
-                        android:layout_weight="0" />
+                        android:layout_height="6dp" />
 
                 </LinearLayout>
 
@@ -290,8 +295,7 @@
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="6dp"
-                    android:layout_weight="0" />
+                    android:layout_height="6dp" />
 
             </LinearLayout>
 

@@ -21,8 +21,8 @@
 
 
     <!-- Buttons & Texts -->
-    <string name="button_reveal">Reveal!</string>
-    <string name="button_show">Show!</string>
+    <string name="button_reveal">Tap to reveal!</string>
+    <string name="button_show">Tap to show!</string>
     <string name="text_score">0</string>
     <string name="timer_start">Start!</string>
 
@@ -68,6 +68,7 @@
 
 
     <!-- Score Page -->
+    <string name="score_header_rank">#</string>
     <string name="score_header_name">Team Name</string>
     <string name="score_header_points">Points</string>
     <string name="score_delete_confirmation">Delete all scores?</string>

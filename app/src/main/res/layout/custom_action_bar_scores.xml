@@ -32,6 +32,7 @@
         android:onClick="buttonOnDeleteClick"
         android:scaleType="fitCenter"
         android:paddingRight="12dp"
-        app:srcCompat="@drawable/ic_delete" />
+        app:srcCompat="@drawable/ic_delete"
+        android:contentDescription="@null" />
 
 </LinearLayout>

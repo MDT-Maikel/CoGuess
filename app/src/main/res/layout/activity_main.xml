@@ -14,32 +14,11 @@
         android:background="#FFFFFF">
 
         <Button
-            android:id="@+id/button_word"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="88dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/round_corner"
-            android:fontFamily="sans-serif-light"
-            android:onClick="buttonOnWordClick"
-            android:padding="10dp"
-            android:text="@string/button_reveal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="44sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_timer" />
-
-        <Button
             android:id="@+id/button_timer"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="180dp"
-            android:layout_height="80dp"
+            android:layout_width="188dp"
+            android:layout_height="88dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/round_corner_timer"
             android:fontFamily="sans-serif-thin"
@@ -47,11 +26,155 @@
             android:text="@string/timer_start"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"
+            android:textSize="52sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_word"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/round_corner"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_timer"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/button_word"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/round_corner"
+                android:fontFamily="sans-serif-light"
+                android:onClick="buttonOnWordClick"
+                android:text="@string/button_reveal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorAppText"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layout_word_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_word"
+                android:weightSum="8" >
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <ImageButton
+                    android:id="@+id/image_button_dict"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/round_corner"
+                    android:cropToPadding="true"
+                    android:onClick="buttonOnDictClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_dict"
+                    android:contentDescription="@null" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="2" >
+                </Space>
+
+                <ImageButton
+                    android:id="@+id/image_button_wiki"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/round_corner"
+                    android:cropToPadding="true"
+                    android:onClick="buttonOnWikiClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/wiki"
+                    android:contentDescription="@null" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="2" >
+                </Space>
+
+                <ImageButton
+                    android:id="@+id/image_button_img"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/round_corner"
+                    android:cropToPadding="true"
+                    android:onClick="buttonOnGoogleClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_img_search"
+                    android:contentDescription="@null" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="2" >
+                </Space>
+
+                <ImageButton
+                    android:id="@+id/image_button_speech"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/round_corner"
+                    android:cropToPadding="true"
+                    android:onClick="buttonOnSpeechClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_speech"
+                    android:contentDescription="@null" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="1" >
+                </Space>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         <ImageButton
             android:id="@+id/image_button_wrong"
@@ -68,7 +191,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_circle_wrong" />
+            app:srcCompat="@drawable/ic_circle_wrong"
+            android:contentDescription="@null" />
 
         <ImageButton
             android:id="@+id/image_button_correct"
@@ -84,89 +208,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/image_button_wrong"
-            app:srcCompat="@drawable/ic_circle_correct" />
-
-        <ImageButton
-            android:id="@+id/image_button_wiki"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/round_corner"
-            android:cropToPadding="true"
-            android:onClick="buttonOnWikiClick"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/image_button_correct"
-            app:layout_constraintEnd_toStartOf="@+id/image_button_img"
-            app:layout_constraintStart_toEndOf="@+id/image_button_dict"
-            app:layout_constraintTop_toBottomOf="@+id/button_word"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/wiki" />
-
-        <ImageButton
-            android:id="@+id/image_button_dict"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/round_corner"
-            android:cropToPadding="true"
-            android:onClick="buttonOnDictClick"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/image_button_wrong"
-            app:layout_constraintEnd_toStartOf="@+id/image_button_wiki"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_word"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_dict" />
-
-        <ImageButton
-            android:id="@+id/image_button_img"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/round_corner"
-            android:cropToPadding="true"
-            android:onClick="buttonOnGoogleClick"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/image_button_correct"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/image_button_wiki"
-            app:layout_constraintTop_toBottomOf="@+id/button_word"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_img_search" />
+            app:srcCompat="@drawable/ic_circle_correct"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/text_score"
-            android:layout_width="60dp"
-            android:layout_height="48dp"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
             android:layout_marginStart="48dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="48dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/round_corner_timer"
+            android:background="@drawable/round_corner_score"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
             android:text="@string/text_score"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/image_button_correct"
             app:layout_constraintStart_toEndOf="@+id/image_button_wrong"
-            app:layout_constraintTop_toTopOf="@+id/image_button_correct" />
+            app:layout_constraintTop_toTopOf="@+id/image_button_correct"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

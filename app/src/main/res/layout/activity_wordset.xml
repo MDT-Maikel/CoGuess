@@ -43,7 +43,8 @@
                 android:layout_weight="0"
                 android:background="?selectableItemBackgroundBorderless"
                 android:onClick="buttonOnSelectPreviousClick"
-                app:srcCompat="@drawable/ic_arrow_left"/>
+                app:srcCompat="@drawable/ic_arrow_left"
+                android:contentDescription="@null" />
 
             <TextView
                 android:id="@+id/wordlist_current"
@@ -84,7 +85,8 @@
                 android:layout_weight="0"
                 android:background="?selectableItemBackgroundBorderless"
                 android:onClick="buttonOnSelectNextClick"
-                app:srcCompat="@drawable/ic_arrow_right"/>
+                app:srcCompat="@drawable/ic_arrow_right"
+                android:contentDescription="@null" />
 
         </LinearLayout>
 
@@ -107,6 +109,7 @@
             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäëïöüÄËÏÖÜß- "
             android:ems="10"
             android:hint="@string/wordset_enter_word"
+            android:autofillHints="@string/wordset_enter_word"
             android:inputType="text|textCapSentences"
             android:singleLine="true"
             app:layout_constraintBottom_toBottomOf="parent"
