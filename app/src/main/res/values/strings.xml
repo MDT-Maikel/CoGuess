@@ -141,6 +141,7 @@
 
     <string name="options_wordset_paste">Paste Words</string>
     <string name="options_wordset_paste_toast">Word list pasted from clipboard, %d out of %d words have been added.</string>
+    <string name="options_wordset_paste_toast_nolist">No words pasted, clipboard is either empty or contains whitespace only.</string>
     <string name="options_wordset_paste_toast_failed">There is no word list for words to be pasted into.</string>
 
     <string name="options_wordset_select_lists">Select Lists</string>

@@ -259,7 +259,10 @@ public class WordSetActivity extends AppCompatActivity
                 int[] result = importCustomWordListFromString(word_list);
 
                 // Show message that list has been pasted from clipboard.
-                AppUtility.displayToastLong(getApplicationContext(), String.format(getResources().getString(R.string.options_wordset_paste_toast), result[0], result[1]));
+                if (result[1] > 0)
+                    AppUtility.displayToastLong(getApplicationContext(), String.format(getResources().getString(R.string.options_wordset_paste_toast), result[0], result[1]));
+                else
+                    AppUtility.displayToastLong(getApplicationContext(), R.string.options_wordset_paste_toast_nolist);
                 return true;
 
             case R.id.opt_wordset_select_lists:
