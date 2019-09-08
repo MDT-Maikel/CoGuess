@@ -34,7 +34,7 @@ def check_word_list_file(lines):
 	line_nr = 0
 	for line in lines:
 		line_nr = line_nr + 1		
-		regex_match = '[^a-zA-Z#\n 124äëïöüÄËÏÖÜß\-()]+'
+		regex_match = '[^a-zA-Z#\n 124äëïöüÄËÏÖÜß\-\'()]+'
 		if re.search(regex_match, line, re.UNICODE):
 			return [re.search(regex_match, line, re.UNICODE), line_nr]
 	return None

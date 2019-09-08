@@ -162,7 +162,7 @@ Parking lot # en # 1
 Parkplatz # de # 1
 Parkeerplaats # nl # 1
 
-Lock # en # 2
+Lock (water) # en # 2
 Schleuse # de # 2
 Sluis # nl # 2
 
@@ -286,6 +286,10 @@ Bathroom # en # 2
 Badezimmer # de # 2
 Badkamer # nl # 2
 
+Chimney # en # 2
+Schornstein # de # 2
+Schoorsteen # nl # 2
+
 Legoland # en # 4
 Legoland # de # 4
 Legoland # nl # 4
@@ -321,3 +325,35 @@ Observatorium # nl # 4
 House boat # en # 4
 Wohnboot # de # 4
 Woonboot # nl # 4
+
+Column # en # 4
+Säule # de # 4
+Zuil # nl # 4
+
+Dome # en # 4
+Kuppel # de # 4
+Koepel # nl # 4
+
+Gallows # en # 4
+Galgen # de # 4
+Galg # nl # 4
+
+Basement # en # 4
+Keller # de # 4
+Kelder # nl # 4
+
+Attic # en # 4
+Dachboden # de # 4
+Zolder # nl # 4
+
+Village # en # 4
+Dorf # de # 4
+Dorp # nl # 4
+
+Market # en # 4
+Markt # de # 4
+Markt # nl # 4
+
+Totem pole  # en # 4
+Totempfahl # de # 4
+Totempaal # nl # 4

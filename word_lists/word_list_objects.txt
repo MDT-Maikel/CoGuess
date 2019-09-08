@@ -386,9 +386,17 @@ Balloon # en # 2
 Ballon # de # 2
 Ballon # nl # 2
 
+Weighing scale # en # 2
+Waage # de # 2
+Weegschaal # nl # 2
+
 Backpack # en # 2
 Rücksack # de # 2
 Rugzak # nl # 2
+
+Helmet # en # 2
+Helm # de # 2
+Helm # nl # 2
 
 Blender # en # 4
 Mixgerät # de # 4
@@ -477,3 +485,119 @@ CD # nl # 4
 Yo-yo # en # 4
 Jo-Jo # de # 4
 Jojo # nl # 4
+
+Water pistol # en # 4
+Wasserpistole # de # 4
+Waterpistool # nl # 4
+
+Rake # en # 4
+Harke # de # 4
+Hark # nl # 4
+
+Shovel # en # 4
+Schaufel # de # 4
+Schep # nl # 4
+
+Axe # en # 4
+Axt # de # 4
+Bijl # nl # 4
+
+Saxophone # en # 4
+Saxophon # de # 4
+Saxofoon # nl # 4
+
+Barrel # en # 4
+Fass # de # 4
+Vat # nl # 4
+
+Rubik's Cube # en # 4
+Zauberwürfel # de # 4
+Rubiks kubus # nl # 4
+
+Wheel # en # 4
+Rad # de # 4
+Wiel # nl # 4
+
+Paper clip # en # 4
+Büroklammer # de # 4
+Paperclip # nl # 4
+
+Scythe # en # 4
+Sense # de # 4
+Zeis # nl # 4
+
+Anchor # en # 4
+Anker # de # 4
+Anker # nl # 4
+
+Plane (tool) # en # 4
+Hobel # de # 4
+Schaaf # nl # 4
+
+Cone # en # 4
+Kegel # de # 4
+Kegel # nl # 4
+
+Dynamite # en # 4
+Dynamit # de # 4
+Dynamiet # nl # 4
+
+Mosaic # en # 4
+Mosaik # de # 4
+Mozaïek # nl # 4
+
+Pipe organ # en # 4
+Orgel # de # 4
+Orgel # nl # 4
+
+Compass # en # 4
+Kompass # de # 4
+Kompas # nl # 4
+
+Compact Cassette # en # 4
+Kompaktkassette # de # 4
+Cassettebandje # nl # 4
+
+Magnet # en # 4
+Magnet # de # 4
+Magneet # nl # 4
+
+Trap # en # 4
+Tierfalle # de # 4
+Val # nl # 4
+
+Candle # en # 4
+Kerze # de # 4
+Kaars # nl # 4
+
+Billiard table # en # 4
+Billardtisch # de # 4
+Biljarttafel # nl # 4
+
+Typewriter # en # 4
+Schreibmaschine # de # 4
+Typemachine # nl # 4
+
+Laser # en # 4
+Laser # de # 4
+Laser # nl # 4
+
+Lego brick # en # 4
+Legostein # de # 4
+Legosteen # nl # 4
+
+Pliers # en # 4
+Zange # de # 4
+Tang # nl # 4
+
+Padlock # en # 4
+Vorhängeschloss # de # 4
+Hangslot # nl # 4
+
+Trumpet # en # 4
+Trompete # de # 4
+Trompet # nl # 4
+
+Hourglass # en # 4
+Sanduhr # de # 4
+Zandloper # nl # 4

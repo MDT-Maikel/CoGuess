@@ -320,7 +320,7 @@ Ezel # nl # 2
 
 Starfish # en # 2
 Seestern # de # 2
-Zeestern # nl # 2
+Zeester # nl # 2
 
 Pelican # en # 2
 Pelikan # de # 2
@@ -345,6 +345,14 @@ Klaverblad # nl # 2
 Seahorse # en # 2
 Seepferdchen # de # 2
 Zeepaardje # nl # 2
+
+Orca # en # 2
+Orca # de # 2
+Orka # nl # 2
+
+Hippo # en # 2
+Nilpferd # de # 2
+Nijlpaard # nl # 2
 
 Meteorite # en # 4
 Meteorit # de # 4
@@ -457,3 +465,71 @@ Drijfzand # nl # 4
 Ghost # en # 4
 Gespenst # de # 4
 Spook # nl # 4
+
+Jellyfish # en # 4
+Qualle # de # 4
+Kwal # nl # 4
+
+Wolf # en # 4
+Wolf # de # 4
+Wolf # nl # 4
+
+Hammerhead Shark # en # 4
+Hammerhai # de # 4
+Hamerhaai # nl # 4
+
+Walrus # en # 4
+Walross # de # 4
+Walrus # nl # 4
+
+Polar bear # en # 4
+Eisbär # de # 4
+Ijsbeer # nl # 4
+
+Snow leopard # en # 4
+Schneeleopard # de # 4
+Sneeuwluipaard # nl # 4
+
+Skunk # en # 4
+Stinktier # de # 4
+Stinkdier # nl # 4
+
+Cave # en # 4
+Höhle # de # 4
+Grot # nl # 4
+
+North Pole # en # 4
+Nordpol # de # 4
+Noordpool # nl # 4
+
+South Pole # en # 4
+Südpol # de # 4
+Zuidpool # nl # 4
+
+Oasis # en # 4
+Oase # de # 4
+Oase # nl # 4
+
+Tornado # en # 4
+Tornado # de # 4
+Tornado # nl # 4
+
+Smoke # en # 4
+Rauch # de # 4
+Rook # nl # 4
+
+Crevasse # en # 4
+Gletscherspalte # de # 4
+Gletsjerspleet # nl # 4
+
+Desert # en # 4
+Wüste # de # 4
+Woestijn # nl # 4
+
+Campfire # en # 4
+Lagerfeuer # de # 4
+Kampvuur # nl # 4
+
+Solar eclipse  # en # 4
+Sonnenfinsternis # de # 4
+zonsverduistering # nl # 4

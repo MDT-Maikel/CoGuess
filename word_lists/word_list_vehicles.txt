@@ -110,6 +110,10 @@ Kick scooter # en # 1
 Roller # de # 1
 Step # nl # 1
 
+Bicycle # en # 1
+Fahrrad # de # 1
+Fiets # nl # 1
+
 Skateboard # en # 1
 Skateboard # de # 1
 Skateboard # nl # 1
@@ -329,3 +333,11 @@ Gondel # nl # 4
 Bobsled # en # 4
 Bob # de # 4
 Bobslee # nl # 4
+
+Stroller # en # 4
+Kinderwagen # de # 4
+Kinderwagen # nl # 4
+
+Periscope # en # 4
+Periskop # de # 4
+Periscoop # nl # 4
