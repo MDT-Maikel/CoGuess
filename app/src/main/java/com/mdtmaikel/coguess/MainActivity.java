@@ -134,11 +134,13 @@ public class MainActivity extends AppCompatActivity
 			// Get duration from settings and start countdown.
 			SharedPreferences sharedConfig = PreferenceManager.getDefaultSharedPreferences(this);
 			String duration = sharedConfig.getString("list_durations", "15");
-
 			int countdown_duration = Integer.parseInt(duration) * 60 * 1000;
 			countdown_time_remaining = countdown_duration;
 			countdown_timer = new CountDownTimerExt(countdown_duration, 1000);
 			countdown_timer.start();
+
+			// Screen stays on during play.
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 			// Update internals and interface.
 			game_state = "running";
@@ -282,6 +284,8 @@ public class MainActivity extends AppCompatActivity
 		setPrimaryButtonViewState(View.INVISIBLE);
 		setSecondaryButtonViewState(View.INVISIBLE);
 		resetWordButton();
+		// Screen does not stay on if not playing.
+		getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 	}
 
 	public void playSound(int sound)
@@ -600,9 +604,8 @@ public class MainActivity extends AppCompatActivity
 		db_custom_wordset = new DBCustomWordSet(this);
 		db_score = new DBScore(this);
 
-		// Screen stays on during play.
+		// Set content view.
 		setContentView(R.layout.activity_main);
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		// Graphical effects.
 		handleButtonHighlighting();
